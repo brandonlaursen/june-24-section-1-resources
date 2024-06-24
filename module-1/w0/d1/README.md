@@ -25,6 +25,9 @@
 - Match The Path Quiz
 ## VS Code
 - Navigating in VS Code
+## Intro to Coding in Canvas
+- Guide: Coding in Canvas
+- PRACTICE: Coding in Canvas
 ## Intro to JavaScript
 - Intro to JavaScript
 - Hello World!, Syntax, Comments
@@ -33,7 +36,7 @@
 - Into to Node
 
 
-## `Practice Session 3 - 1h`
+## `Practice Session 3 - 30m`
 
 ## Testing
 - Intro To Test Specs
