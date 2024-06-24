@@ -1,19 +1,16 @@
 
 # `Week 0 Day 1`
 - Orientation
-- Typical Lecture Format
-  - Online Lecture Etiquette
 - Practice Session 1
   - Learning Habits
 - Practice Session 2
   - Terminal
-- Practice Session 3
   - Intro to JS
-- Practice Session 4
+- Practice Session 3
   - Testing
 
 
-## `Practice Session 1 - 45min(Groups)`
+## `Practice Session 1 - 30min`
 ## Learning Habits
 - Developing Strong Learning Habits
 - How To Learn
@@ -28,9 +25,6 @@
 - Match The Path Quiz
 ## VS Code
 - Navigating in VS Code
-
-
-## `Practice Session 3 - 1h`
 ## Intro to JavaScript
 - Intro to JavaScript
 - Hello World!, Syntax, Comments
@@ -39,7 +33,7 @@
 - Into to Node
 
 
-## `Practice Session 4 - 1h`
+## `Practice Session 3 - 1h`
 
 ## Testing
 - Intro To Test Specs
