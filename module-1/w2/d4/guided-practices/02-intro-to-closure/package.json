@@ -1,0 +1,16 @@
+{
+  "name": "intro-to-closure",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha",
+    "test-with-json": "mocha --reporter ./test/utils/reporter.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "chai-spies": "^1.1.0",
+    "mocha": "^10.2.0"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "problem-solving",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "App Academy",
+  "dependencies": {
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}
