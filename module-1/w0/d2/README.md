@@ -1,7 +1,7 @@
 # `Week 0 Day 2`
 
 - Practice Session 1
-  - Expressions
+  - Numbers
 - Practice Session 2
   - Booleans
 - Practice Session 3
@@ -36,6 +36,8 @@
 
 - Variables
 - Add Lib
+
+## Checkpoint Submission Demo
 
 ## `Practice Session 7`
 
