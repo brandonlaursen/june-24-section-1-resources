@@ -10,7 +10,6 @@
   - Strings
 - Practice Session 5
   - Variables
-- Git Demo
 - Expressions Checkpoint
 
 ## `Practice Session 1 - 15min`
@@ -37,8 +36,6 @@
 
 - Variables
 - Add Lib
-
-## `Git Demo`
 
 ## `Practice Session 7`
 
