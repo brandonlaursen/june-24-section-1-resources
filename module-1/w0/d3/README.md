@@ -1,17 +1,16 @@
 # `Week 0 Day 3`
 
+- HW Review
 - Practice Session 1
-- Asking Great Coding Questions
+  - Readings
 - Practice Session 2
-  - Parameters and Arguments
+  - Refactor-code
 - Practice Session 3
-  - Strings Operators
+   - Pseudocode
 - Practice Session 4
-  - Math Operators
+   - funny-strings
 - Practice Session 5
-  - Polya's Framework
-  - Asking Great Questions
-  - Problem Solving Problems
+  - Commenting Code
 - Functions Checkpoint
 
 ## `Practice Session 1 - 45m`
