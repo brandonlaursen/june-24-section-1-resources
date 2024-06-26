@@ -1,7 +1,7 @@
 # `Week 0 Day 3`
 
 - Practice Session 1
-  - Functions
+- Asking Great Coding Questions
 - Practice Session 2
   - Parameters and Arguments
 - Practice Session 3
@@ -14,29 +14,30 @@
   - Problem Solving Problems
 - Functions Checkpoint
 
-## `Practice Session 1 - 20min`
+## `Practice Session 1 - 45m`
 
-- Functions
+### Readings
+- Asking Great Coding Questions
+- How To Solve Any Problem - Polya
+- Introduction to Pseudocode
+- Commenting Code
+- Utilizing Online Resources and Documentation
 
 ## `Practice Session 2 - 20min`
 
-  - Parameters and Arguments
+  - Refactor-code
 
 ## `Practice Session 3 - 20min`
 
-  - Strings Operators
+  - Pseudocode
 
 ## `Practice Session 4 - 20min`
 
-  - Math Operators
+  - funny-strings
 
-## `Practice Session 5 - 1h`
-  - Asking Great Coding Questions
-  - How To Solve Any Problem - Polya
-  - Introduction to Pseudocode
+## `Practice Session 5 - 20`
+
   - Commenting Code
-  - Utilizing Online Resources and Documentation
-  - Problem Solving Problems
 
 ## `Practice Session 6`
 
