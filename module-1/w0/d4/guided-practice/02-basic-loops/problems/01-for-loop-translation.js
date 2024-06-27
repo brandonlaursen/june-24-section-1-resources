@@ -25,4 +25,3 @@ function aCounter(word) {
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = aCounter;
-
