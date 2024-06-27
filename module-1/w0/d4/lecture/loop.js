@@ -1,4 +1,3 @@
-
 /*
 
   Loops
@@ -18,3 +17,46 @@
       * arrays can hold user information that we may need to access to print to the string
 
 */
+
+//  1. Initial Expression
+//  2. Condition for which we keep looping
+//  3. Step towards completing the loop/meeting the condition
+// ctrl + c - stop loop
+
+let start = 0;
+let end = 10;
+let step = 2;
+
+// for (let i = 0; i <= 10; i += 2) {
+// for (let i = start; i <= end; i += step) {
+//   console.log(i);
+// }
+
+let string = "anything";
+// console.log(string.length);// 8
+
+// console.log(string[0]);
+// console.log(string[1]);
+// console.log(string[2]);
+// console.log(string[3]);
+// console.log(string[4]);
+// console.log(string[5]);
+// console.log(string[6]);
+// console.log(string[7]);
+// let i = 4;
+// console.log(string[i]);//
+
+function iterateThroughString(string) {
+  console.log(string.length);
+  let newString = "";
+  for (let i = string.length - 1; i >= 0; i--) {
+    let letter = string[i];
+    newString += letter;
+    console.log("letter", letter, "index", i, newString);
+  }
+
+  console.log(newString);
+}
+
+iterateThroughString("anything");
+// iterateThroughString('dog')
