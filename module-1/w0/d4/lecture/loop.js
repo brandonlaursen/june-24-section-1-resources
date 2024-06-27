@@ -47,7 +47,7 @@ let string = "anything";
 // console.log(string[i]);//
 
 function iterateThroughString(string) {
-  console.log(string.length);
+
   let newString = "";
   for (let i = string.length - 1; i >= 0; i--) {
     let letter = string[i];
@@ -58,5 +58,39 @@ function iterateThroughString(string) {
   console.log(newString);
 }
 
-iterateThroughString("anything");
+// iterateThroughString("anything");
 // iterateThroughString('dog')
+
+
+//  1. Initial Expression
+//  2. Condition for which we keep looping
+//  3. Step towards completing the loop/meeting the condition
+
+// for(let i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+// * while loop
+//  1. Initial Expression
+// let i = 0;
+
+//  2. Condition for which we keep looping
+// while(i < 5){
+
+//   console.log(i);
+//   //  3. Step towards completing the loop/meeting the condition
+//   i++;
+// }
+
+
+let num = 10;
+
+while(true) {
+
+  num++;
+  if(num % 5 === 0) {
+    console.log(num);
+    break;
+  }
+
+}
