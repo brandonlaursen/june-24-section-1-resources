@@ -1,0 +1,79 @@
+name: GitHub Classroom Autograder - Basic JavaScript - Functions
+on:
+  push:
+    branches-ignore:
+      - main
+      - master
+
+env:
+  MAX_SCORE: 30
+  PASSING_SCORE: 30
+  COURSE_ID: '339' # (Required) canvas course id
+  ASSIGNMENT_ID: '18151' # (Required) canvas assignment id
+
+jobs:
+  grade:
+    name: Grade Submission for ${{ github.ref_name }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display necessary software versions
+        run: |
+          echo "Node version: $(node --version)"
+          echo "Npm version: $(npm --version)"
+      - name: Checkout student code
+        uses: actions/checkout@v4
+        with:
+          path: student/
+      - name: Remove student test files
+        run: |
+          rm -rf student/test/
+      - name: Checkout solution test files
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
+          repository: ${{ secrets.SOLUTION_REPO_NAME }}
+          path: solution/
+          sparse-checkout: |
+            ${{ secrets.SOLUTION_PROJECT_PATH }}/test/
+          sparse-checkout-cone-mode: false
+      - name: Move solution test files to student folder
+        run: |
+          cp -r solution/${{ secrets.SOLUTION_PROJECT_PATH }}/test/ student/test/
+      - name: Install dependencies in student folder
+        run: |
+          cd student/
+          npm install
+      - name: Run tests in student folder
+        run: |
+          cd student/
+          (npx mocha --reporter ./test/reporter.js | tee output.json) 1> /dev/null 2> errors.txt
+      - name: Display failed tests
+        run: |
+          cd student/
+          if [ -s output.json ]
+          then
+            cat output.json | jq '.failures'
+          else
+            cat errors.txt
+          fi
+      - name: Send student's grade to SF
+        if: ${{ always() }}
+        run: |
+          cd student/
+          posted_score="$( cat output.json | jq '.stats.passes' )"
+          if [ "$posted_score" = "" ]
+          then
+            posted_score="0"
+          fi
+          echo "  SCORE: $posted_score  "
+          curl -X POST '${{ secrets.RESULTS_WEBHOOK }}' \
+            -H 'Content-Type: application/json' \
+            -d '{
+              "GithubUsername": "${{ github.ref_name }}",
+              "PostedGrade": "'${posted_score}'",
+              "MaxScore": "'${MAX_SCORE}'",
+              "PassingScore": "'${PASSING_SCORE}'",
+              "CourseId": "'${COURSE_ID}'",
+              "AssignmentId": "'${ASSIGNMENT_ID}'",
+              "GithubRepoUrlPath": "${{ github.repository }}"
+            }'
