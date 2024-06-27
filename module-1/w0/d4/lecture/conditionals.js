@@ -28,3 +28,82 @@
 // Conditionals cans be used to control the flow of our program
 // * by providing conditions, and commands on what to do if conditions are met or not
 // * there are many types of conditions we can check
+
+function isGreaterThan5(num) {
+  if (num === 5) console.log("num is equal is to 5");
+  else if (num < 5) console.log("num is less than 5");
+  else if (num > 2) console.log("num is greater than 2");
+  else if (num > 5) console.log("num is greater than 5");
+  else console.log("is this a number?");
+
+  // if(num > 5) {
+  //   console.log("num is greater than 5");
+  // }
+  // if(num > 2) {
+  //   console.log("num is greater than 2");
+  // }
+
+  // return false;
+}
+
+// console.log(isGreaterThan5(10));
+// console.log(isGreaterThan5(5));
+// console.log(isGreaterThan5("string"));
+
+let randomNum = Math.random();
+
+// mutually exclusive
+if (randomNum > 0.5) {
+  // console.log('heads');
+} else {
+  // console.log('tails')
+}
+
+// ternary
+// condition ? exprIfTrue : exprIfFalse
+
+// randomNum > .5 ? console.log('heads') : console.log('tails')
+
+function flipCoin() {
+  let randomNum = Math.random();
+
+  return randomNum > 0.5 ? "heads" : "tails";
+}
+
+// console.log(flipCoin());
+
+
+
+
+if('string') {
+  console.log('is truthy')
+}
+
+
+if('false') {
+  console.log('is truthy')
+}
+
+
+if(24) {
+  console.log('is truthy')
+}
+
+
+if(0) {
+  console.log('is falsy')
+}
+
+if('') {
+  console.log('is falsy')
+}
+
+if(undefined) {
+  console.log('is falsy')
+}
+
+
+
+if(' ') {
+  console.log('======>','is truthy')
+}
