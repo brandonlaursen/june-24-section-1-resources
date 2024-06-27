@@ -27,20 +27,18 @@ understand the problem
 execute the plan
 */
 
-const firstHalf = str =>  str.slice(0, str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2);
-// }
+// const firstHalf = str =>  str.slice(0, str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2);
+
+
 function firstHalf(str) {
-  // let halfway;
-  // if (str.length % 2 === 0) {
-  //   halfway = str.length / 2;
-  // } else {
-  //   halfway = (str.length + 1) / 2;
-  // }
+  let halfway;
+  if (str.length % 2 === 0) {
+    halfway = str.length / 2;
+  } else {
+    halfway = (str.length + 1) / 2;
+  }
 
-  // let halfway = str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2
-
-  // console.log(halfway);
-  let result = str.slice(0, str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2);
+  // let result = str.slice(0, str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2);
   return str.slice(0, str.length % 2 === 0 ? str.length / 2 : (str.length + 1) / 2);
 }
 
