@@ -1,5 +1,4 @@
 # `Week 1 Day 5`
-- Mock Practice Assessment
-- Practice assessment walkthrough
+- Assessment released
 - Study Day
 - Kahoot
