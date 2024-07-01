@@ -85,6 +85,5 @@ let newLength = months.pop();
 
 
 
-
 // mutated the array
 // is returning value
