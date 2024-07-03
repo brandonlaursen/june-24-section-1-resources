@@ -13,7 +13,23 @@ npm test test/02-exclusive-range-spec.js
 // Eg: If the minimum number is 2 and the maximum number is 5, then the function
 // should return an array of [3, 4].
 
-// Your code here 
+
+
+function exclusiveRange(min, max){
+
+  let numbers = [];
+
+  for(let i = min + 1; i < max; i++){
+    // console.log(i);
+    numbers.push(i);
+    // console.log(numbers);
+  }
+
+  return numbers;
+}
+
+// console.log(exclusiveRange(0, 5));// should return [1, 2, 3, 4]
+
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = exclusiveRange;

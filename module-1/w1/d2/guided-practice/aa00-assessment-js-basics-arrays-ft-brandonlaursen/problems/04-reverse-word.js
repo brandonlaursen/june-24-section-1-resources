@@ -16,12 +16,17 @@ npm test test/04-reverse-word-spec.js
 // the characters in the word and return it as a string. Use the methods
 // researched from MDN above.
 
-// Your code here 
+function reverseWord(string){
+
+  return string.split('').reverse().join('');
+}
 
 // OPTIONAL CHALLENGE: Define a function called reverseWordChallenge that takes
 // in a word string. Reverse the characters in the word and return it as a
 // string WITHOUT using the methods researched from MDN above.
-// Your code here 
+// Your code here
+
+// console.log(reverseWord('maps'))// should return 'spam')
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = reverseWord;

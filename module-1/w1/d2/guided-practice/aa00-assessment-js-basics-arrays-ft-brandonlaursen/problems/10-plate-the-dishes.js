@@ -20,9 +20,30 @@ npm test test/10-plate-the-dishes-spec.js
 // values in the first array, do NOT add them to the end of the first
 // array.
 
-// Your code here 
 
-// console.log(plateTheDishes([null, 'burger', null], ['salad'])); //=> ['salad', 'burger', null]
+function plateTheDishes(arr1, arr2){
 
+  let i = 0;
+  let j = 0;
+  // for(let i = 0; i < arr1.length; i++){
+  while(i < arr1.length && j < arr2.length){
+    let ele = arr1[i];
+
+    if(ele === null) {
+      arr1[i] = arr2[j];
+      j++;
+    }
+    i++;
+  };
+
+  return arr1;
+}
+
+// arr1 => 3
+// arr2 => 1
+
+console.log(plateTheDishes([null, 'burger', null], ['salad'])); //=> ['salad', 'burger', null]
+console.log(plateTheDishes(['salmon', null], ['soup', 'rice']))// should return ['salmon', 'soup']
+console.log(plateTheDishes(['pancake', 'eggs'], ['bagel']));// should return ['pancake', 'eggs']
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = plateTheDishes;

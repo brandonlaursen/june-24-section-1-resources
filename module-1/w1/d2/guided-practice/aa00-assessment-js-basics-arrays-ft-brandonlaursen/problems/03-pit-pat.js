@@ -11,7 +11,19 @@ npm test test/03-pit-pat-spec.js
 // the minimum and maximum numbers (inclusive) that are divisible by 4 or 6, but
 // not by both.
 
-// Your code here 
+function pitPat(min, max) {
+  let numbers = [];
+
+  for (let i = min; i <= max; i++) {
+    if ((i % 4 === 0 && i % 6 !== 0 ) || (i % 4 !== 0 && i % 6 === 0))
+      numbers.push(i);
+  }
+
+  return numbers;
+}
+
+// console.log(pitPat(0, 6))// should return [4, 6])
+// console.log(pitPat(40, 50)); // should return [40, 42, 44]
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = pitPat;

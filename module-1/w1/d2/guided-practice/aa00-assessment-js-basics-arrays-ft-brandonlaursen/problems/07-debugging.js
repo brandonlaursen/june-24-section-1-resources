@@ -23,18 +23,24 @@ npm test test/07-debugging-spec.js
 
 function fizzBuzzArr(range) {
   for (let i = 0; i <= range.length; i++) {
+    // console.log(i);
     let num = range[i];
     if (num % 3 === 0 && num % 5 === 0) {
-      arr[i] = "Fizzbuzz";
+      range[i] = "Fizzbuzz";
     } else if (num % 3 === 0) {
-      range[num] = "fizz";
-    } if (num % 5 === 0) {
-      range[i] = "Buzzer";
+      range[i] = "Fizz";
+    } else if (num % 5 === 0) {
+      range[i] = "Buzz";
     }
-    range[i] = i;
+    // range[i] = i;
+    // console.log(range);
   }
-  return arr;
+
+  return range;
 }
+
+// console.log(fizzBuzzArr([3, 4, 5]));// ['Fizz, 4, Buzz']
+console.log(fizzBuzzArr([15, 16, 17, 18]))// should return ['Fizzbuzz', 16, 17, 'Fizz']
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = fizzBuzzArr;

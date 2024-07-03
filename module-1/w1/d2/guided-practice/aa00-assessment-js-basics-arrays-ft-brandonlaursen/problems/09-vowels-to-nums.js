@@ -16,7 +16,23 @@ npm test test/09-vowels-to-nums-spec.js
 
 let VOWELS = ["a", "e", "i", "o", "u"];
 
-// Your code here 
+
+
+function vowelsToNums(characters){
+
+  for(let i = 0; i < characters.length; i++){
+    let character = characters[i];
+    // console.log(character);
+    if(VOWELS.includes(character)){
+      // console.log(character);
+      let index = VOWELS.indexOf(character);
+      // console.log(index);
+      characters[i] = index;
+    }
+  }
+
+  return characters;
+}
 
 // console.log(vowelsToNums(["h", "e", "l", "l", "o"])) //=> ["h", 1, "l", "l", 3]
 
