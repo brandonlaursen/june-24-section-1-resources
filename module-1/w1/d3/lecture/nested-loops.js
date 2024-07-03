@@ -34,7 +34,7 @@
 let matrix = [
   [1, 2, 3],
   [3, 4, 5],
-  [6, 7, 8],
+  [6, 7]
 ];
 
 let sum = 0;
@@ -45,7 +45,7 @@ for (let i = 0; i < matrix.length; i++) {
 
   // [ 6, 7, 8 ]
 
-  for (let j = 0; j < 1; j++) {
+  // for (let j = 0; j < 1; j++) {
     // console.log('   inner loop')
     // let number = subArr[j];
     // console.log(" number:", number, 'i:',i, 'j:', j);
@@ -54,8 +54,13 @@ for (let i = 0; i < matrix.length; i++) {
     // let number = matrix[i][i];
     // sum += number
     // console.table(subArr);
-  };
+  // };
+  
 };
 
 
 // console.log(sum)
+
+// function myFunc(){
+
+// }
