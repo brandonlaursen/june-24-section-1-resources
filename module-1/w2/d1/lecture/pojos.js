@@ -174,3 +174,16 @@ car.color = car.cOLORr;
 delete car.cOLORr;
 console.log(car);
 // console.log(car.color);// undefined
+
+// let json ={
+//   'name':'brandon'
+// }
+
+
+let obj = {
+  arr: [1,2,3],
+  nestedObj: {
+    nestedArr: [4,5,6]
+  },
+
+}
