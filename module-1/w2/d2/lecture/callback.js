@@ -41,17 +41,67 @@
 // }
 
 function higherOrder(callback) {
-
   // console.log(callback);// [Function: callback]
-  console.log(callback());// Hello from callback
-
-};
+  console.log(callback()); // Hello from callback
+}
 
 // let age = 28;
 // let string = 'string'
 
 let callback = () => {
-  return 'Hello from callback';
-}
+  return "Hello from callback";
+};
+
+
 
 // console.log(higherOrder(callback));
+
+function doubleNumbers(numbers, callback) {
+  // console.log(numbers, callback);// [ 1, 2, 3 ] [Function: double]
+  // console.log(callback());// NaN
+  // console.log(callback(100));// 200
+  let result = [];
+
+  for(let i = 0; i < numbers.length; i++){
+    let number = numbers[i];
+    // console.log(number);
+    // console.log(callback(number));// 2 | 4 | 6
+    let doubledNum = callback(number);
+    result.push(doubledNum);
+  };
+
+  return result;
+}
+
+function double(num) {
+  return num * 2;
+}
+
+// console.log(doubleNumbers([1,2,3], double));// [2, 4, 6]
+
+// console.log([1,2,3].map(double));
+
+
+
+
+
+
+
+// console.log(
+//   doubleNumbers([1, 2, 3], function double(num) {
+//     return num * 2;
+//   })
+// ); // [2,4,6]
+
+// let doubleNum = (num) => {
+//   return num * 2;
+// };
+
+// console.log(doubleNumbers([1,2,3], doubleNum = (num) => {
+//   return num * 2;
+// }));
+
+// let doubleNum = num => num * 2;
+
+
+// console.log(doubleNumbers([1,2,3],  num => num * 2));
