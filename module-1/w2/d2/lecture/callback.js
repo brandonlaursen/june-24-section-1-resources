@@ -55,7 +55,7 @@ let callback = () => {
 
 
 // console.log(higherOrder(callback));
-
+// numbers => [1,2,3]  | callback => double => function
 function doubleNumbers(numbers, callback) {
   // console.log(numbers, callback);// [ 1, 2, 3 ] [Function: double]
   // console.log(callback());// NaN
@@ -77,7 +77,7 @@ function double(num) {
   return num * 2;
 }
 
-// console.log(doubleNumbers([1,2,3], double));// [2, 4, 6]
+console.log(doubleNumbers([1,2,3], double));// [2, 4, 6]
 
 // console.log([1,2,3].map(double));
 
