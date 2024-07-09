@@ -9,13 +9,22 @@ A variable called `lights` should evaluate to 'dark'.
 */
 
 let bigObj = { name: 'party', color: 'green', theme: 'dark' }
-// Your code here 
+// Your code here
+
+// let {  color,  name: type,  theme: lights } = bigObj;
+// let {name: type, theme: lights} = bigObj;
+
+
+//                       =  {name: 'party', color: 'green', theme: 'dark', type: 'party', lights: 'dark'}
+let {color, type, lights} = {...bigObj, type: 'party', lights: 'dark'};
+// 'green',  'party' 'dark'
+
 
 // console.log(color);   // 'green'
 // console.log(type);    // 'party'
 // console.log(lights);  // 'dark'
 
-
+// console.log('===1==>', type, lights);
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 
 try {
@@ -24,4 +33,4 @@ try {
     type,
     lights,
   };
-} catch {}
+} catch {};

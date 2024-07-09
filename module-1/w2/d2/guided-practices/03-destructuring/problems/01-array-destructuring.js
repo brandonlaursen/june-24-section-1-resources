@@ -9,12 +9,16 @@ A variable called `sixth` should evaluate to ["pineapple"].
 */
 
 let bigArray = ["apple", 14, 32, 100, { name: "party" }, ["pineapple"]];
-// Your code here 
 
-// console.log(second); // 14
-// console.log(third);  // 32
-// console.log(fifth);  // { name: "party" }
-// console.log(sixth);  // ["pineapple"]
+// let [first, second, third, fourth, fifth, sixth] = bigArray;
+let [, second, third, , fifth, sixth] = bigArray;
+
+// console.log(first, second, third,)
+
+console.log(second); // 14
+console.log(third);  // 32
+console.log(fifth);  // { name: "party" }
+console.log(sixth);  // ["pineapple"]
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

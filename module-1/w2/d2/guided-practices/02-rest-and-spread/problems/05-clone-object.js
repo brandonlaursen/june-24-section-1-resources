@@ -13,10 +13,19 @@ const obj = {
   green: "hexagon"
 }
 
-// Your code here 
+// let red = obj.red;
+// let green = obj.green;
+// console.log(red, green); // circle hexagon
 
-// console.log(objClone);  // { red: "circle", blue: "square", yellow: "pentagon" }
-// console.log(green);     // hexagon
+// const { blue, ...restOfKeyValPairs } = obj;
+// console.log(blue); // circle
+// console.log(restOfKeyValPairs);
+
+let {green, ...objClone} = {...obj, yellow: "pentagon"}
+// console.log(obj);
+
+console.log(objClone);  // { red: "circle", blue: "square", yellow: "pentagon" }
+console.log(green);     // hexagon
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

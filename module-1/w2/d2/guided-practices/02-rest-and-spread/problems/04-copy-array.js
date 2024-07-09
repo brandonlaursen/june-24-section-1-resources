@@ -11,12 +11,19 @@ const obj = {
   green: "hexagon"
 }
 
-// Your code here 
+
+//  [1, "two", "3"]  = [1, "two", "3"]
+// let [...arrRest] = arr;
+// let arrSpread = [...arr];
 
 // console.log(arrRest);   // [1, "two", "3"]
 // console.log(arrSpread); // [1, "two", "3"]
 
-// console.log(objRest);   // { red: "circle", blue: "square", green: "hexagon" }
+// gathering the rest of the values into a variable
+let {...objRest} = obj
+// let objSpread = {...obj};
+
+console.log(objRest);   // { red: "circle", blue: "square", green: "hexagon" }
 // console.log(objSpread); // { red: "circle", blue: "square", green: "hexagon" }
 
 
