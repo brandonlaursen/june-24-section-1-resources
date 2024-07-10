@@ -8,26 +8,35 @@ has been friends with the user for more than 5 years. Assign the output of
 const friends = [
   {
     name: "Albert",
-    yearsOfFriendship: 3
+    yearsOfFriendship: 3,
   },
   {
     name: "Angela",
-    yearsOfFriendship: 2
+    yearsOfFriendship: 2,
   },
   {
     name: "Freddy",
-    yearsOfFriendship: 8
+    yearsOfFriendship: 8,
   },
   {
     name: "Agatha",
-    yearsOfFriendship: 6
-  }
+    yearsOfFriendship: 6,
+  },
 ];
 
-const goodFriendsOrNot;
+const goodFriendsOrNot = friends.filter((friend) => {
+  // console.log(friend);// { name: 'Albert', yearsOfFriendship: 3 }
+  // if(friend.yearsOfFriendship > 5) {
+  //   return true;
+  // }
+    // return false;
 
-// console.log(goodFriendsOrNot);          // [false, false, true, true]
+    // return friend.yearsOfFriendship > 5 ? true : false;
+    return friend.yearsOfFriendship > 5
 
+});
+
+console.log(goodFriendsOrNot); // [false, false, true, true]
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 

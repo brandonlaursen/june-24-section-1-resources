@@ -24,9 +24,42 @@ const friends = [
 ];
 
 // Hint: create an array of vowels to use in your solution.
-const threeVowelFriend;
+// let vowels = 'aeiouAEIOU';
+// let vowels = ['a','e','i','o','u'];
 
-// console.log(threeVowelFriend); // [ { name: 'Angela', yearsOfFriendship: 2 } ]
+// const threeVowelFriend = friends.find( (friend, i, arr) => {
+//   // console.log(friend);
+//   // let { name } = friend// "Angela"
+//   let name = friend.name;
+//   // console.log(name);
+//   let counter = 0;
+//   for(let i = 0; i < name.length; i++){
+//     let letter = name[i].toLowerCase();
+
+//     if(['a','e','i','o','u'].includes(letter)){
+//       counter++;
+//     }
+//   }
+//   // console.log(counter);// 3
+//   return counter >= 3;
+// })
+
+const threeVowelFriend = friends.find( ({name}) => {
+ 
+  let counter = 0;
+  for(let i = 0; i < name.length; i++){
+    let letter = name[i].toLowerCase();
+
+    if(['a','e','i','o','u'].includes(letter)){
+      counter++;
+    }
+  }
+  // console.log(counter);// 3
+  return counter >= 3;
+})
+
+
+console.log(threeVowelFriend); // [ { name: 'Angela', yearsOfFriendship: 2 } ]
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
