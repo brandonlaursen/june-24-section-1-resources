@@ -23,10 +23,30 @@ const friends = [
   }
 ];
 
-// Hint: create an array of vowels to use in your solution.
-const totalYears;
+// 1 iteration | acc = 0  |   { name: "Angela", yearsOfFriendship: 3 }
+// 2 iteration | acc = 3  |   { name: "Albert", yearsOfFriendship: 2 }
+// 3 iteration | acc = 5  |   { name: "Freddy", yearsOfFriendship: 8 }
+// 4 iteration | acc = 13  |  { name: "Agatha", yearsOfFriendship: 6 }
+// totalYears = 19
 
-// console.log(totalYears); // 19
+// const totalYears = friends.reduce(
+
+//   (acc, friend) => {
+//   console.log('acc:',acc,'yearsOfFriendship', friend.yearsOfFriendship);
+//   acc *= friend.yearsOfFriendship;
+//   return acc;
+
+// },1)
+
+
+const totalYears = friends.reduce(sum, 0);
+
+function sum(acc, friend){
+
+  return acc += friend.yearsOfFriendship;
+}
+
+console.log(totalYears); // 19
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/

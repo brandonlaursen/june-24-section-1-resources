@@ -45,7 +45,7 @@ const friends = [
 // })
 
 const threeVowelFriend = friends.find( ({name}) => {
- 
+
   let counter = 0;
   for(let i = 0; i < name.length; i++){
     let letter = name[i].toLowerCase();
@@ -54,6 +54,7 @@ const threeVowelFriend = friends.find( ({name}) => {
       counter++;
     }
   }
+
   // console.log(counter);// 3
   return counter >= 3;
 })
