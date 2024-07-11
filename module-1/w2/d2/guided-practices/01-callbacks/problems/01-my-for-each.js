@@ -26,22 +26,22 @@ const friends = [
 
 
 
-// function myForEach(friends, callback){
-//   // console.log(friends, callback);
+function myForEach(friends, callback){
+  // console.log(friends, callback);
 
-//   for(let i = 0; i < friends.length; i++){
-//     let friendObj = friends[i];
-//     // console.log(friendObj);// { name: 'Albert', yearsOfFriendship: 3 }
-//     // console.log(friendObj.name);
-//    callback(friendObj);
+  for(let i = 0; i < friends.length; i++){
+    let friendObj = friends[i];
+    // console.log(friendObj);// { name: 'Albert', yearsOfFriendship: 3 }
+    // console.log(friendObj.name);
+   callback(friendObj);
 
-//   }
-// }
+  }
+}
 
 
-// myForEach(friends, friend => {
-//   console.log(friend.name + ": " + friend.yearsOfFriendship + " years");
-// });
+myForEach(friends, friend => {
+  console.log(friend.name + ": " + friend.yearsOfFriendship + " years");
+});
 
 
 function myForEach(friends, callback){
