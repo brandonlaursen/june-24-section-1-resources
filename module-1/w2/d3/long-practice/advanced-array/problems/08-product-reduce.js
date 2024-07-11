@@ -15,10 +15,24 @@ console.log(productWithReduce([4, 3])); // 12
 
 */
 
+
 let productWithReduce = function(nums) {
-    // Your code here 
+    // Your code here
+
+    // console.log(nums);// [ 10, 3, 5, 2 ]
+
+    let total = nums.reduce(  (acc, currentVal) => {
+
+      return acc * currentVal;
+
+    },    1)
+
+    return total;
 }
 
+
+
+// console.log(productWithReduce([10, 3, 5, 2])); // 300
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
