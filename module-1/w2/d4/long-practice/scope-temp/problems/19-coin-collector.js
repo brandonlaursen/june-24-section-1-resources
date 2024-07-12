@@ -25,7 +25,27 @@ Example 3:
 
 ***********************************************************************/
 
-// Your code here 
+function coinCollector(numCoins) {
+
+  let coins = [];
+
+  return function collector(coin) {
+    coins.push(coin)
+    numCoins--;
+    console.log(numCoins, coin, coins);
+    if(numCoins === 0) {
+      return coins;
+    } else {
+      return collector;
+    }
+  }
+}
+
+
+let threeCoins = coinCollector(3); // returns a function
+console.log(threeCoins(25)); // returns a function
+console.log('==>',threeCoins(5)); // returns a function
+console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

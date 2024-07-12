@@ -21,8 +21,28 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - Explain, but don't code, how you would turn your solution into a one-line
   fat-arrow function
 ***********************************************************************/
+//lazyAdder(1)
+// const lazyAdder1 = firstNum => secondNum => thirdNum => firstNum + secondNum + thirdNum;
+function lazyAdder(firstNum) {
+  // console.log(firstNum)
 
-// Your code here 
+  // firstAdd(2)
+  return function (secondNum) {
+    //secondAdd(3)
+    return function (thirdNum) {
+      //sum => 1 + 2 + 3 = 6
+      return firstNum + secondNum + thirdNum;
+    };
+  };
+}
+
+let firstAdd = lazyAdder(1);
+// console.log("1==>", firstAdd); // [Function (anonymous)]
+let secondAdd = firstAdd(2);
+// console.log("2==>", secondAdd); // [Function (anonymous)]
+let sum = secondAdd(3);
+
+console.log(sum); // prints 6
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
