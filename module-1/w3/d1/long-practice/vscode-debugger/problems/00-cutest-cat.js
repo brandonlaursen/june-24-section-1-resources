@@ -5,12 +5,14 @@ rating.
 */
 
 function cutestCat(cats) {
-  let cutest;
+  // let cutest; // undefined
+  let cutest = cats[0] // is a cat obj
   let i = 0;
 
   while (i < cats.length) {
     const cat = cats[i];
-    if (cat > cutest) {
+    // 9 > undefined
+    if (cat.cuteness > cutest.cuteness) {
       cutest = cat.cuteness;
     }
     i++;

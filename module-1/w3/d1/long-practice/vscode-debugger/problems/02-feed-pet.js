@@ -7,10 +7,23 @@ of foods that you have fed that pet.
 
 */
 
+// function feedPet(name) {
+//   const foods = [];
+//   return (food) => {
+//     return "Fed " + name + " " + foods.push(food) + ".";
+//   }
+// }
+
+// Errors:
+
+// 1. foods.push(food) cannot be in the return
+// 2. foods.join(', ') needs to be in the return
+
 function feedPet(name) {
   const foods = [];
   return (food) => {
-    return "Fed " + name + " " + foods.push(food) + ".";
+    foods.push(food)
+    return "Fed " + name + " " + foods.join(', ') + ".";
   }
 }
 
