@@ -58,9 +58,6 @@ function sayHi(name1, name2) {
 //   clearTimeout(timer);
 // }
 
-
-
-
 // fib
 function somethingSlow(n) {
   if (n === 1 || n === 2) return 1;
@@ -88,14 +85,70 @@ function baz() {
 // Predict the order of what will be outputted??
 // no need to write what something slow will actually print
 
-
-
-
-
-
-
+// const delaysArr = [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100];
 
 function delayedPrinter(delaysArr) {
+  if (!delaysArr.length) return;
 
-  
+  // const currentDelay = delaysArr.shift();
+
+  const currentDelay = delaysArr[0];
+  console.log(currentDelay);
+
+  // setTimeout(callbackFunc, delay, param1, param2)
+  setTimeout(delayedPrinter, currentDelay, delaysArr);
+  // delayedPrinter(delaysArr);
 }
+
+// delayedPrinter(delaysArr);
+
+// indirect recursion
+function one(num) {
+  if (num <= 0) return;
+  num -= 1;
+  console.log("entering func 1", num);
+  two(num);
+}
+
+function two(num) {
+  if (num <= 0) return;
+  num -= 2;
+  console.log("entering func 2", num);
+  one(num);
+}
+
+// one(100);
+
+
+delaysArr = [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100];
+
+function delayedPrinter(delaysArr) {
+  if (!delaysArr.length) return;
+
+  // const currentDelay = delaysArr.shift();
+
+  const currentDelay = delaysArr[0];
+  console.log(currentDelay);
+
+  // setTimeout(callbackFunc, delay, param1, param2)
+  setTimeout(delayedPrinter, currentDelay, delaysArr);
+  // delayedPrinter(delaysArr);
+}
+
+
+
+delaysArr = [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100];
+
+function delayedPrinterIteration(delaysArr) {
+
+  let totalDelay = 0;
+  delaysArr.forEach(delay => {
+    totalDelay += delay;
+    setTimeout(() => {
+      console.log(`wating for ${delay}ms`);
+    }, totalDelay);
+  })
+
+}
+
+delayedPrinterIteration(delaysArr)
