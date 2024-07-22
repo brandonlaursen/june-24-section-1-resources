@@ -1,4 +1,4 @@
-/******************************** CONSTANTS *********************************/ 
+/******************************** CONSTANTS *********************************/
 const applePieRecipe = [
   { name: "pie crust", cost: 10.00, quantity: 1 },
   { name: "sugar", cost: 3.00, quantity: 0.5 },
@@ -32,10 +32,15 @@ const recipes = {
 };
 /* DO NOT CHANGE THE CODE ABOVE */
 
-/*************************** FUNCTION TO REFACTOR ****************************/ 
-function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
+/*************************** FUNCTION TO REFACTOR ****************************/
+
+
+function combineIngredients(pieType, pieQuantity){
+
+  // ! combining ingredients
   // Find the recipe for the pieType specified
   const recipe = recipes[pieType];
+
   // Bake the number of pies specified by the pieQuantity
   for (let i = 0; i < pieQuantity; i++) {
     // Print the ingredients for each ingredient in the recipe
@@ -47,6 +52,15 @@ function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
     console.log(`Baked pie ${i + 1}!`);
   }
 
+}
+
+// combineIngredients()
+
+
+function findRevenue(pieType, pieQuantity, profitMargin){
+
+  const recipe = recipes[pieType];
+    // ! Cost of pie
   // Print the cost of each pie based on the cost of each ingredient
   const costOfPie = recipe.reduce((prev, current) => {
     return prev + current.cost;
@@ -56,8 +70,21 @@ function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
   // Calculate the total cost of all the pies
   const totalCost = costOfPie * pieQuantity;
 
-  // Print the total revenue calculated using the given profitMargin
   const revenue = totalCost * (profitMargin || 1.2);
+
+  // console.log(revenue);
+  return revenue;
+}
+
+
+function bakeAndSellPies(pieType, pieQuantity, profitMargin) {
+
+
+  combineIngredients(pieType, pieQuantity);
+
+  let revenue = findRevenue(pieType, pieQuantity, profitMargin);
+  // console.log('==>',revenue);
+
   console.log(`Sold ${pieQuantity} pies for $${revenue.toFixed(2)}!`);
 }
 

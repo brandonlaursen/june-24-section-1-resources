@@ -28,12 +28,17 @@ describe("isOdd(number)", () => {
     const num3 = -999;
 
     const actual1 = isOdd(num1); // should be true
+    // if we pass num2 which holds the number 2953
+    // to the function is odd
+    // were storing the return value in actual2
     const actual2 = isOdd(num2); // should be true
     const actual3 = isOdd(num3); // should be true
 
     expect(actual1).to.be.true;
     expect(actual2).to.be.true;
-    expect(actual3).to.be.true;
+
+
+    expect(isOdd(-999)).to.be.true;
   });
 
   it("should return false if the num is even", () => {
@@ -73,7 +78,9 @@ describe("myRange(min, max, step)", () => {
       const expected2 = [];
 
       expect(actual1).to.eql(expected1);
-      expect(actual2).to.eql(expected2);
+
+
+      expect(myRange(0, 5)).to.eql([0, 1, 2, 3, 4, 5]);
     });
   });
 
