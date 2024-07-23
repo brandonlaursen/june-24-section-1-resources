@@ -61,6 +61,7 @@ class Car {
     this.model = model;
 
     Car.numCars += 1;
+    Car.garage.push(this);
   }
 
   // instance method
@@ -69,12 +70,14 @@ class Car {
   }
 
   static numCars = 0;
+  static garage = [];
 
 
   // static method, called on the class itself NOT an instance
   static getCars(...cars) {
     return cars.map(car => car);
   }
+
 }
 
 
@@ -89,10 +92,13 @@ const mustang = new Car('mustang', 'ford', 'shelby');
 // console.log(Car.getCars(challenger, mustang));// [ 'challenger', 'mustang' ]
 // console.log(mustang.getCars(mustang, challenger));
 
-// console.log(Car.numCars);// 2
-console.log(mustang);
+console.log(Car.numCars);// 2
+console.log(Car.garage);
+
+Car.garage.forEach(car => console.log(car));
+// console.log(mustang);
 // delete mustang;
 
-console.log(mustang);
+// console.log(mustang);
 
 // console.log(mustang.numCars);
