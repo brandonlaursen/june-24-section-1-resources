@@ -17,6 +17,7 @@ class Student extends Person {
     } else {
       // console.log("Both students have the same GPA");
       return "Both students have the same GPA"
+      // console.log("Both students have the same GPA")
     }
   }
 }
