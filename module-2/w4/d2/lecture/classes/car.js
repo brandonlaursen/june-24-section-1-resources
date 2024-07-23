@@ -60,7 +60,9 @@ class Car {
     this.make = make;
     this.model = model;
 
-    Car.numCars += 1;
+    this.noise = 'vroooooom';
+
+    Car.num += 1;
     Car.garage.push(this);
   }
 
@@ -69,7 +71,7 @@ class Car {
     return `${this.name} goes vroooom!`;
   }
 
-  static numCars = 0;
+  static num = 0;
   static garage = [];
 
 
@@ -92,13 +94,16 @@ const mustang = new Car('mustang', 'ford', 'shelby');
 // console.log(Car.getCars(challenger, mustang));// [ 'challenger', 'mustang' ]
 // console.log(mustang.getCars(mustang, challenger));
 
-console.log(Car.numCars);// 2
-console.log(Car.garage);
+// console.log(Car.numCars);// 2
+// console.log(Car.garage);
 
-Car.garage.forEach(car => console.log(car));
+// Car.garage.forEach(car => console.log(car));
 // console.log(mustang);
 // delete mustang;
 
 // console.log(mustang);
 
 // console.log(mustang.numCars);
+
+
+module.exports = Car;
