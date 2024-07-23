@@ -49,4 +49,4 @@ module.exports = {
 // module.exports = [add, subtract, multiply];
 
 
-console.log(module);
+// console.log(module);
