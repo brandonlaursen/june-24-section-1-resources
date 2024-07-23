@@ -42,9 +42,11 @@ describe("Student class", () => {
       expect(Student.compareGPA(student1, student2)).to.equal(
         "sarah smith has the higher GPA."
       );
-      
+
       let student3 = new Student("roger", "rabbit", "cartoon-director", 3.5);
-      expect(Student.compareGPA(student2, student3)).to.eql(
+
+      let result = Student.compareGPA(student2, student3)
+      expect(result).to.eql(
         "sarah smith has the higher GPA."
       );
     });
