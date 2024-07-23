@@ -1,5 +1,3 @@
-const sayHelloTo = require("./say-hello-to");
-
 
 
 function giveMessageToMrsPotato(message) {
@@ -9,5 +7,6 @@ function giveMessageToMrsPotato(message) {
 
 giveMessageToMrsPotato("Hi Buzz");
 
-
-module.exports = { giveMessageToMrsPotato };
+//!!START SILENT
+module.exports = giveMessageToMrsPotato;
+//!!END
