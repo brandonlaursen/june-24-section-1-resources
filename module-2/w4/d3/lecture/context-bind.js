@@ -193,15 +193,15 @@ let newCat = new Cat('pumpkin', 5, 'ragamuffin')
 
 // newCat.print();// Cat { name: 'pumpkin', age: 5, breed: 'ragamuffin' }
 
-let printCat = newCat.print;
+// let printCat = newCat.print;
 // console.log(printCat);
 
 // console.log(printCat());
 
-let bindPrintCat = newCat.print.bind(newCat);
+// let bindPrintCat = newCat.print.bind(newCat);
 
 // bindPrintCat();
 
-// let arrowPrintName = newCat.fatArrowPrint;
+let arrowPrintName = newCat.fatArrowPrint;
 
-// arrowPrintName();
+arrowPrintName();
