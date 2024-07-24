@@ -5,7 +5,7 @@ const Employee = require('./employee');
 const john = new Employee('John Wick','Dog Lover');
 
 
-// setTimeout(john.sayName, 2000);
+setTimeout(john.sayName, 2000);
 
 
 // setTimeout(() => john.sayName(), 2000);
@@ -15,9 +15,9 @@ const john = new Employee('John Wick','Dog Lover');
 
 
 
-let sayNameBound = john.sayName.bind(john);
+// let sayNameBound = john.sayName.bind(john);
 
 // sayNameBound();
 
 
-setTimeout(sayNameBound, 2000);
+// setTimeout(sayNameBound, 2000);

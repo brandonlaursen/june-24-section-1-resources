@@ -6,8 +6,8 @@ class Employee{
     this.occupation = occupation;
   }
 
-  sayName() {
-    console.log(this);
+  sayName = () => {
+
     console.log(`${this.name} says hello`)
   }
 
