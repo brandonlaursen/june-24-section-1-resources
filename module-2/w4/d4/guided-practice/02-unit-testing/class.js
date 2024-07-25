@@ -45,4 +45,9 @@ class Word {
   }
 }
 
+// const newWord = new Word('trash');
+// const result = newWord.pigLatin();
+// console.log(result);
+// console.log(newWord);
+
 module.exports = { Word };
