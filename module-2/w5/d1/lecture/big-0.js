@@ -66,8 +66,8 @@ Space vs Time Complexity
   Big-O	                    Complexity Class Name
   * O(1)	                      constant
   * O(n)	                      linear
-  * O(n^3)                      quadratic
-
+  * O(n^2)                      quadratic
+  * O(n^3)                      cubic
   * O(log(n))	                  logarithmic
   * O(n * log(n))	              log-linear, linearithmic, quasi-linear
   * O(nc) - O(n2), O(n3), etc.	polynomial
@@ -289,6 +289,6 @@ function shift() {
   for(let i = 0; i < this.length - 1; i++) {
     arr[i] = arr[i + 1];
   };
-  
+
   return arr.length
 }
