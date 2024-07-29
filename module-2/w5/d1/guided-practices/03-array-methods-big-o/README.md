@@ -5,8 +5,8 @@ justification for your answer. Assume `arr` is an array of length _n_.
 
 ## `arr.push()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(1)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [push on MDN][push]
@@ -14,15 +14,15 @@ Justification: _Fill this in_
 
 ## `arr.pop()`
 
-Time complexity: O(?)
-Space complexity: O(?)
+Time complexity: O(1)
+Space complexity: O(1)
 Justification: _Fill this in_
 
 [pop on MDN][pop]
 
 ## `arr.shift()`
 
-Time complexity: O(?)
+Time complexity: O(n)
 Space complexity: O(?)
 Justification: _Fill this in_
 
