@@ -1,13 +1,9 @@
-
-
-
 // Base 10 - Decimal
-  // * 10 Options: 0 - 9
+// * 10 Options: 0 - 9
 // Base 2  - Binary
-  // * 2 Options: 0 & 1
+// * 2 Options: 0 & 1
 // Base 16 - Hexadecimal
-  // * 16 Options: 0 - 9, A,B,C,D,E,F
-
+// * 16 Options: 0 - 9, A,B,C,D,E,F
 
 // 0b 0101 0101
 // * Binary digit is a bit
@@ -17,7 +13,6 @@
 // * 8 bits is a byte
 // 0101 0101
 
-
 // ! 1 byte = 8 bits
 
 // Kilobyte - thousand
@@ -26,8 +21,6 @@
 // 0101
 // * 1 billion bytes
 // 0010 0101
-
-
 
 /*
 
@@ -113,26 +106,24 @@
 const binary = `0b11001010`;
 
 function binaryToDecimal(binaryStr) {
-
   binaryStr = binary.slice(2);
   // console.log(binaryStr);// 11001010
   // binaryStr = [...binaryStr].reverse();
-  binaryStr = binaryStr.split('').reverse().join('');
+  binaryStr = binaryStr.split("").reverse().join("");
   // console.log(binaryStr);
 
   let sum = 0;
 
-  for(let i = 0; i < binaryStr.length; i++){
+  for (let i = 0; i < binaryStr.length; i++) {
     let bit = binaryStr[i];
     // console.log(bit);
     let num = Math.pow(2, i) * parseInt(bit);
     // console.log(num);
     sum += num;
-  };
+  }
 
   return sum;
-
-};
+}
 
 // console.log(binaryToDecimal(binary));// 202
 // parseInt(string, radix)
@@ -140,8 +131,119 @@ function binaryToDecimal(binaryStr) {
 // console.log(parseInt(11001010, 2))
 // console.log(parseInt(`11001010`, 2))
 
-
 // let decimal = parseInt(11001010, 2)
 
 // decimal to binary
 // console.log(decimal.toString(2));// 11001010
+
+/*
+
+
+   Base 16 - Hexadecimal
+  * Base 10 - decimal
+  * Base 2 - binary
+
+  * hex = 6, dec = 10, hence hexadecimal (6 + 10 = 16)
+  * Prepended with 0x
+  * x representing hex
+
+  The digits are 0-9
+  A, B, C, D, E and F representing 10, 11, 12, 13, 14 and 15, respectively
+  A - 10
+  B - 11
+  C - 12
+  D - 13
+  E - 14
+  F - 15
+
+  0x A1 -> 161
+
+  Index -     1       0
+  B^I   -   16^1      16^0
+            16        1
+  Value    A(10)      1
+(B^I) * V   160       1
+
+  160 + 1 = 161
+
+  161 -> 0xA1
+
+
+  161 / 16 = 10 - r1
+  10 / 16  = 0  - r10 <- left most value
+
+  0x A1
+
+
+
+
+
+  Index -     1       0
+  B^I   -   16^1      16^0
+            16        1
+  Value    A(10)      1
+(B^I) * V   160       1
+
+  160 + 1 = 161
+
+
+*/
+
+const hex = `0xA1`;
+
+const hexChar = {
+  A: 10,
+  B: 11,
+  C: 12,
+  D: 13,
+  E: 14,
+  F: 15,
+};
+
+function hexToDecimal(hexStr) {
+  hexStr = hexStr.slice(2);
+  // console.log(hexStr);//A1
+  hexStr = hexStr.split("").reverse().join("");
+  // console.log(hexStr);
+
+  let sum = 0;
+  for (let i = 0; i < hexStr.length; i++) {
+    let char = hexStr[i];
+    // console.log(char);
+
+    if (hexChar[char]) {
+      // console.log(char);
+      let value = hexChar[char];
+      // console.log(value);
+      let num = Math.pow(16, i) * value;
+      // console.log(num);
+      sum += num;
+    } else {
+      let num = Math.pow(16, i) * parseInt(char);
+      // console.log(num);
+      sum += num;
+    }
+  }
+
+  return sum;
+}
+
+// console.log(hexToDecimal(hex));
+
+// console.log(parseInt(hex, 16));// 161
+
+// let decimal = parseInt(hex, 16);
+
+// console.log(`0x${decimal.toString(16)}`);// a1
+
+// ASCII
+
+// console.log(String.fromCharCode(65)); //  A
+
+// console.log(String.fromCharCode(66)); //  B
+
+// console.log(String.fromCharCode(67)); //  C
+
+
+
+
