@@ -7,15 +7,24 @@ class LinkedListNode {
 
 class LinkedList {
   constructor() {
-    // Your code here 
+    // Your code here
   }
 
   addToHead(val) {
-    // Your code here 
+
+    // create the new node
+    // point the newNodes next at the old head
+    // this.head point at the new node
   }
 
   addToTail(val) {
-    // Your code here 
+    // Your code here
+    // create the new node
+    // find the head
+    // traverse through the linked list
+      // by checking what the node.next
+      // if the node.next is null, then thats the last node
+    // point last nodes next at the new node
   }
 
   // You can use this function to help debug
@@ -29,6 +38,10 @@ class LinkedList {
 
     console.log("NULL");
   }
-}
+};
+
+const ll = new LinkedList();
+// console.log(ll);
+
 
 module.exports = LinkedList;
