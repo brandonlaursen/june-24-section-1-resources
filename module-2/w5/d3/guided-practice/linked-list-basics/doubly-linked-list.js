@@ -15,31 +15,61 @@ class DoublyLinkedList {
   }
 
   addToHead(val) {
-    // Your code here
-    // create a new node
-    // if there is no length/head/tail
-    // point head and tail at new node
-    // if there is length
-    // point the old heads previous at the new node
-    // point the new nodes next at the old head
-    // point at the head at the new node
+    const newNode = new DoublyLinkedListNode(val);
+
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.head.prev = newNode;
+      newNode.next = this.head;
+      this.head = newNode;
+    }
+
+    this.length++;
   }
 
   addToTail(val) {
-    // Your code here
+    const newNode = new DoublyLinkedListNode(val);
+
+    if (this.length === 0) {
+      this.head = newNode;
+      this.tail = newNode;
+    } else {
+      this.tail.next = newNode;
+      newNode.prev = this.tail;
+      this.tail = newNode;
+    }
+
+    this.length++;
   }
 
   // You can use this function to help debug
   print() {
     let current = this.head;
 
+    let sum = 0;
     while (current) {
       process.stdout.write(`${current.value} <-> `);
+
+      // if (current.value === 200) {
+      //   console.log(200);
+      // }
+      sum += current.value;
       current = current.next;
     }
 
+    // console.log(sum);
     console.log("NULL");
   }
 }
+
+const dll = new DoublyLinkedList();
+// console.log(dll);// DoublyLinkedList { head: null, tail: null, length: 0 }
+dll.addToHead(100);
+dll.addToHead(200);
+dll.addToHead(300);
+// console.log(dll);
+dll.print();
 
 module.exports = DoublyLinkedList;
