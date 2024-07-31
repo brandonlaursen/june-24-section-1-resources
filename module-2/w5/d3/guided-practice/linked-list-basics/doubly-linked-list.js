@@ -8,15 +8,25 @@ class DoublyLinkedListNode {
 
 class DoublyLinkedList {
   constructor() {
-    // Your code here 
+    // Your code here
+    this.head = null;
+    this.tail = null;
+    this.length = 0;
   }
 
   addToHead(val) {
-    // Your code here 
+    // Your code here
+    // create a new node
+    // if there is no length/head/tail
+    // point head and tail at new node
+    // if there is length
+    // point the old heads previous at the new node
+    // point the new nodes next at the old head
+    // point at the head at the new node
   }
 
   addToTail(val) {
-    // Your code here 
+    // Your code here
   }
 
   // You can use this function to help debug
