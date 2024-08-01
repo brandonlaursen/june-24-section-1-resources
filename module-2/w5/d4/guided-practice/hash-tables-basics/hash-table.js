@@ -61,10 +61,33 @@ class HashTable {
   }
 
   insert(key, value) {
+
     // find the index by running the key through the hashMod function
+    const index = this.hashMod(key);
+
     // grab the pair at the index
+    let currentPair = this.data[index];
 
     // check if there currentPair at that index is the key we are trying to insert
+    while(currentPair) {
+
+      if(currentPair.key === key) {
+        break;
+      };
+      currentPair = currentPair.next;
+    };
+
+    if(currentPair) {
+      currentPair.value = value;
+      return;
+    }
+
+    const newPair = new KeyValuePair(key, value);
+
+    newPair.next = this.data[index];
+    this.data[index] = newPair;
+    this.count++;
+    return;
       // if it is stop
       // if it isnt, check the next pair
 
