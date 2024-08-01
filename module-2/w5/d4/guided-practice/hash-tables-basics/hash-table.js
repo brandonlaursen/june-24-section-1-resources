@@ -39,17 +39,26 @@ class HashTable {
       this.data[index] = newPair;
       this.count++;
     }
-    // this.data[index]
-    // if there is something there
-    // that means we have a collision throw an error
-    // if something isnt there
-    // so well want to create a keyValuePair
-    // and place it at that index
-    // increment
+
   }
 
   insertWithHashCollisions(key, value) {
-    // Your code here
+
+    const newPair = new KeyValuePair(key, value); // {key, value};
+     // grab the index of the key by running through hashMod
+     const index = this.hashMod(key);
+     // check if there is a pair at the index
+     if (this.data[index]) {
+      //  throw new Error("hash collision or same key/value pair already exists!");
+      // set the newPairs next as the pair at that index
+      // set the pair at the index to be the newNode
+     } else {
+
+       this.data[index] = newPair;
+
+     };
+
+     this.count++;
   }
 
   insert(key, value) {
