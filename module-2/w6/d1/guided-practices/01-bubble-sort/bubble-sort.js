@@ -9,9 +9,6 @@
 */
 
 
-
-
-
 function bubbleSort(arr) {
   let hasSwapped = true;
 
@@ -27,8 +24,9 @@ function bubbleSort(arr) {
         hasSwapped = true;
 
         // Do not move this console.log
-        console.log(arr.join(","));
+
       }
+      console.log(arr.join(","));
     }
     // If you get to the end of the array and no swaps have occurred, return
     // Otherwise, repeat from the beginning
