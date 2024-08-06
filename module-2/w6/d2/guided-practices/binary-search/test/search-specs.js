@@ -10,7 +10,7 @@ describe ('Search', function () {
 
     arr = [];
 
-    for (let i = 0 ; i < 1000000 ; i++) {
+    for (let i = 0 ; i < 1_000_000 ; i++) {
       arr.push(i);
     }
 
@@ -77,4 +77,3 @@ describe ('Search', function () {
 
 
 });
-
