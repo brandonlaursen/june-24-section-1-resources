@@ -92,10 +92,21 @@ class BinarySearchTree {
   }
 
 
-  
+
   // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // Your code here
+    let queue = [this.root];
+
+    while(queue.length > 0) {
+      let currentNode = queue.shift();
+
+      console.log(currentNode.val);
+
+      if(currentNode.left) queue.push(currentNode.left);
+      if(currentNode.right) queue.push(currentNode.right);
+    }
+
   }
 
   // Depth First Traversal - Iterative
@@ -114,7 +125,8 @@ const bst = new BinarySearchTree();
 // bst.insert(7);
 // // bst.preOrderTraversal();
 // // bst.inOrderTraversal();
-bst.postOrderTraversal();
+bst.breadthFirstTraversal()
+// bst.postOrderTraversal();
 // console.log(bst);
 
 module.exports = { BinarySearchTree, TreeNode };
