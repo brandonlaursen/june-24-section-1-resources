@@ -8,53 +8,60 @@ class TreeNode {
 }
 
 class BinarySearchTree {
-
   constructor() {
     // Your code here
+    this.root = null;
   }
 
-  insert(val, currentNode=this.root) {
-    // Your code here
+  insert(val, currentNode = this.root) {
+
+    const newNode = new TreeNode(val)
 
     // check if there a root
+    if (!this.root) {
+      this.root = newNode;
+      return;
+    }
     // if there is not, the new node is the root
 
     // check the current nodes value
-    // if the new value is less than the current node val
-    // we traverse the left
-      // check if there is left
-      // if there isnt, set the newNode as the currentNodes left
-      // if there is, traverse
+    if (val < currentNode.val) {
+      // if the new value is less than the current node val
+      if (!currentNode.left) {
+        currentNode.left = newNode;
+      } else {
+        this.insert(val, currentNode.left)
+      }
+    }  else {
 
-    // if the new value is greater than the current node val
-    // we traverse down the right
-     // we traverse the right
-      // check if there is right
-      // if there isnt, set the newNode as the currentNodes right
-      // if there is, traverse
+      if(!currentNode.right) {
+        currentNode.right = newNode;
+      } else {
+        this.insert(val, currentNode.right);
+      }
+    }
 
   }
 
   search(val) {
     // Your code here
-  }
 
+    // 
+  }
 
   preOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-
   inOrderTraversal(currentNode = this.root) {
     // Your code here
   }
-
 
   postOrderTraversal(currentNode = this.root) {
     // Your code here
   }
 
-    // Breadth First Traversal - Iterative
+  // Breadth First Traversal - Iterative
   breadthFirstTraversal() {
     // Your code here
   }
@@ -64,5 +71,15 @@ class BinarySearchTree {
     // Your code here
   }
 }
+
+const bst = new BinarySearchTree();
+// bst.insert(4);
+// bst.insert(2);
+// bst.insert(6);
+// bst.insert(1);
+// bst.insert(3);
+// bst.insert(5);
+// bst.insert(7);
+// console.log(bst);
 
 module.exports = { BinarySearchTree, TreeNode };
