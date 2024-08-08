@@ -17,12 +17,35 @@ const adjList = {
 }
 
 function breadthFirstTraversal(start) {
-  // Your code here 
+
+  const queue = [start];
+  const visited = new Set([start]);
+
+  const res = [];
+
+  while(queue.length) {
+
+    const curr  = queue.shift();
+    res.push(curr);
+
+    const neighbors = adjList[curr];
+
+    neighbors.forEach(neighbor => {
+      if(!visited.has(neighbor)) {
+        queue.push(neighbor);
+        visited.add(neighbor);
+      }
+    })
+
+  };
+
+
+  return res;
 }
 
-// console.log(breadthFirstTraversal(3)); // [3, 2, 4, 1, 5, 6]
-// console.log(breadthFirstTraversal(6)); // [6, 4, 3, 5, 2, 1]
-// console.log(breadthFirstTraversal(4)); // [4, 3, 5, 6, 2, 1]
+console.log(breadthFirstTraversal(3)); // [3, 2, 4, 1, 5, 6]
+console.log(breadthFirstTraversal(6)); // [6, 4, 3, 5, 2, 1]
+console.log(breadthFirstTraversal(4)); // [4, 3, 5, 6, 2, 1]
 
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
