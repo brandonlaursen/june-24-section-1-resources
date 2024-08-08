@@ -64,7 +64,7 @@ function findNeighbors(node, matrix) {
 
 function bfsPath(matrix, startNode, endValue) {
   let queue = [startNode];
-  let visited = new Set( [  `${startNode[0]},${startNode[1]}` ] ); // `0,0`
+  let visited = new Set([`${startNode[0]},${startNode[1]}`]); // `0,0`
 
   let path = [];
 
@@ -74,13 +74,12 @@ function bfsPath(matrix, startNode, endValue) {
     path.push(currentNode);
 
     const [row, col] = currentNode;
-    // console.log(matrix[row][col]);
 
     if (matrix[row][col] === endValue) {
       return path;
     }
 
-    let neighbors = findNeighbors(currentNode, matrix); // [[0,1], [1,0]];
+    let neighbors = findNeighbors(currentNode, matrix); 
 
     neighbors.forEach((neighbor) => {
       let stringCoords = `${neighbor[0]},${neighbor[1]}`;
@@ -103,7 +102,16 @@ const matrix1 = [
   [9, 10, 11, 12],
   [13, 14, 15, 16],
 ];
-console.log(bfsPath(matrix1, [0, 0], 16));
+// console.log(bfsPath(matrix1, [0, 0], 16));
+console.log(bfsPath(matrix1, [0, 0], 7));
+// [
+//   [ 0, 0 ], [ 1, 0 ],
+//   [ 0, 1 ], [ 2, 0 ],
+//   [ 1, 1 ], [ 0, 2 ],
+//   [ 3, 0 ], [ 2, 1 ],
+//   [ 1, 2 ]
+// ]
+
 
 // // EXAMPLE TESTS #1. Tests for findNeighbors function
 // console.log(findNeighbors([1,1], matrix1)) // Finds all 4 neighbors from an

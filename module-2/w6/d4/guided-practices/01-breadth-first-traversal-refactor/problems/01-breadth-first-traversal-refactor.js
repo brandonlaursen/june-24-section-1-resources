@@ -26,7 +26,8 @@ function breadthFirstTraversal(start) {
   while(queue.length) {
 
     const curr  = queue.shift();
-    res.push(curr);
+
+    res.push(curr);// DO THE THING
 
     const neighbors = adjList[curr];
 

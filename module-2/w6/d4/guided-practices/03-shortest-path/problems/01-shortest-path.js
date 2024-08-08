@@ -30,15 +30,19 @@ function shortestPath(start, end) {
 
   const queue = [[start]];
   const visited = new Set([start]);
+  // let path = [];
 
   while(queue.length) {
 
     const currPath = queue.shift();
     const currNode = currPath[currPath.length - 1];
 
-    if(currNode === end) return currPath;
+    // path.push(currPath);
+    if(currNode === end) return currPath.length - 1;
+
 
     const neighbors = adjList[currNode];
+
 
     neighbors.forEach(neighbor => {
 
@@ -49,6 +53,7 @@ function shortestPath(start, end) {
     })
 
   }
+  console.log(path)
 
   return null;
 }

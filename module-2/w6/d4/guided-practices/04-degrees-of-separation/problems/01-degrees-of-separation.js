@@ -20,16 +20,40 @@ const adjList = {
   3: [2, 4],
   4: [3, 5],
   5: [1, 2, 4],
-  6: []
-}
+  6: [],
+};
 
 function degreesOfSeparation(start, end) {
+  // Your code here
+
+  const queue = [[start]];
+  const visited = new Set([start]);
+  // let path = [];
+
+  while (queue.length) {
+    const currPath = queue.shift();
+    const currNode = currPath[currPath.length - 1];
+
+    // path.push(currPath);
+    if (currNode === end) return currPath.length - 1;
+
+    const neighbors = adjList[currNode];
+
+    neighbors.forEach((neighbor) => {
+      if (!visited.has(neighbor)) {
+        queue.push([...currPath, neighbor]);
+        visited.add(neighbor);
+      }
+    });
+  }
+  // console.log(path)
+
+  return null;
 }
 
-// console.log(degreesOfSeparation(1, 3)); // -> 2
+console.log(degreesOfSeparation(1, 3)); // -> 2
 // console.log(degreesOfSeparation(5, 2)); // -> 1
 // console.log(degreesOfSeparation(6, 1)); // -> null
-
 
 /******************** DO NOT MODIFY ANY CODE BELOW THIS LINE *****************/
 module.exports = degreesOfSeparation;
