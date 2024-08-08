@@ -26,10 +26,34 @@ const adjList = {
 }
 
 function shortestPath(start, end) {
-  // Your code here 
+  // Your code here
+
+  const queue = [[start]];
+  const visited = new Set([start]);
+
+  while(queue.length) {
+
+    const currPath = queue.shift();
+    const currNode = currPath[currPath.length - 1];
+
+    if(currNode === end) return currPath;
+
+    const neighbors = adjList[currNode];
+
+    neighbors.forEach(neighbor => {
+
+      if(!visited.has(neighbor)) {
+        queue.push([...currPath, neighbor]);
+        visited.add(neighbor);
+      }
+    })
+
+  }
+
+  return null;
 }
 
-// console.log(shortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution)
+console.log(shortestPath(1, 3)); // -> [ 1, 2, 3 ] (One possible solution)
 // console.log(shortestPath(4, 1)); // -> [ 4, 5, 1 ] (One possible solution)
 // console.log(shortestPath(6, 1)); // -> null
 
