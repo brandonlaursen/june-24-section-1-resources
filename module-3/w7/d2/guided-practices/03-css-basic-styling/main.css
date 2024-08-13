@@ -1,14 +1,24 @@
 h1 {
-    font-size: ;
-    font-family: ;
-    padding: ;
-    margin: ;
-    font-weight: ;
-    text-decoration: ;
-    color: ;
-    background-color: ;
+    font-size: 4.2em;
+    font-family: "Gill Sans", sans-serif;
+    padding: 30px;
+    margin: 100px ;
+    font-weight: bold;
+    text-decoration:  green wavy overline;
+    color: grey;
+    background-color: white;
 }
 
+
+.logo {
+    background-size: cover;
+    background-image: url("https://appacademy.github.io/styleguide/assets/logo/logo-emblem-black-1000.png");
+    background-color: red;
+    height: 100px ;
+    width: 100px;
+}
+
+/*
 h2 {
     font-size: ;
     font-family: ;
@@ -27,11 +37,7 @@ p {
     color: ;
     background-color: ;
 }
+/*
 
-.logo {
-    background-size: cover;
-    background-image: url();
-    background-color: ;
-    height: ;
-    width: ;
-}
+
+*/
