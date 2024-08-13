@@ -1,5 +1,46 @@
 /* Your code here */
 
+
+/*
+id - #
+class .
+tag
+ */
+ #page-title{
+    font-weight: bold;
+ }
+
+ .pagenum {
+    position: absolute;
+    right: 10px;
+    font-size: small;
+ }
+
+
+ p {
+    text-align: justify;
+    /* padding-top:.75em;
+    padding-bottom: .75em */
+    margin-top: .75em;
+    margin-bottom: .75em;
+ }
+
+ pre {
+    width: fit-content;
+    margin: 100px auto;
+ }
+
+ a {
+    text-decoration: none;
+ }
+
+ a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+ }
+
+
+
 /* ===== DO NOT EDIT BELOW THIS COMMENT ===== */
 
 .noin {
