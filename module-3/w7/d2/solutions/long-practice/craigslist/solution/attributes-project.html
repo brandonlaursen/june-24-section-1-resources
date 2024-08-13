@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="attributes-project.css">
+    <script>
+      window.addEventListener("DOMContentLoaded", event => {
+        let collapsibles = document.querySelectorAll(".menu.collapsible h5");
+        collapsibles.forEach(collapsible => {
+          collapsible.addEventListener("click", (event) => {
+            event.target.classList.toggle("active");
+            const content = event.target.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body class="homepage en desktop w1024">
+    <div class="wrapper">
+      <section class="page-container">
+        <div class="bglogo"></div>
+        <nav id="topban" class="regular">
+          <div class="regular-area">
+            <h2 class="area">austin, TX</h2>
+          </div>
+        </nav>
+        <div id="leftbar">
+          <div id="logo">
+          <a href="https://www.craigslist.org/about/sites">craigslist</a>
+        </div>
+        <ul id="postlks">
+          <li><a id="post" href="https://post.craigslist.org/c/aus">create a posting</a></li>
+          <li><a href="https://accounts.craigslist.org/login/home">my account</a></li>
+        </ul>
+        <form id="search" class="homepage-search" action="/search/" method="GET">
+          <input type="hidden" name="sort" value="rel">
+          <input type="hidden" name="ordinal" id="ordinal" value="1">
+          <input type="hidden" name="ratio" id="ratio" value="0">
+          <input type="hidden" name="clicked" id="clicked" value="0">
+          <input id="query" class="querybox flatinput" name="query" data-autocomplete="search-count" autocorrect="off" autocapitalize="off" placeholder="search craigslist" autofocus="autofocus">
+          <select id="catAbb" name="catAbb" class="homepage-category-picker">
+            <option value="" selected="selected">select category</option>
+            <option value="ccc">community</option>
+            <option value="eee">events</option>
+            <option value="ggg">gigs</option>
+            <option value="hhh">housing</option>
+            <option value="jjj">jobs</option>
+            <option value="rrr">resumes</option>
+            <option value="sss">for sale</option>
+            <option value="bbb">services</option>
+          </select>
+          <button type="submit" id="go" class="searchbtn"><span class="icon icon-search"><span class="screen-reader-text">search craigslist</span></span></button>
+        </form>
+        <h4 id="calban"><a href="/d/events-classes/search/eee">event calendar</a></h4>
+        <table class="cal">
+          <tr class="days">
+            <th>M</th>
+            <th>T</th>
+            <th>W</th>
+            <th>T</th>
+            <th>F</th>
+            <th>S</th>
+            <th>S</th>
+          </tr>
+          <tr>
+            <td class="">21</td>
+            <td class="">22</td>
+            <td class="">23</td>
+            <td class="today "><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-24">24</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-25">25</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-26">26</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-27">27</a></td>
+          </tr>
+          <tr>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-28">28</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-29">29</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-30">30</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-10-31">31</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-01">1</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-02">2</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-03">3</a></td>
+          </tr>
+          <tr>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-04">4</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-05">5</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-06">6</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-07">7</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-08">8</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-09">9</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-10">10</a></td>
+          </tr>
+          <tr>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-11">11</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-12">12</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-13">13</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-14">14</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-15">15</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-16">16</a></td>
+            <td class=""><a href="//austin.craigslist.org/d/events-classes/search/eee?sale_date=2019-11-17">17</a></td>
+          </tr>
+        </table>
+        <ul class="leftlinks" id="user_resources">
+          <li id="cl_app_beta" ><a href="https://www.craigslist.org/about/cl_app_beta">cl mobile app <sup>beta</sup></a></li>
+          <li><a href="https://www.craigslist.org/about/help/">help, faq, abuse, legal</a></li>
+          <li><a href="https://www.craigslist.org/about/scams">avoid scams &amp; fraud</a></li>
+          <li><a href="https://www.craigslist.org/about/safety">personal safety tips</a></li>
+          <li><a href="//www.craigslist.org/about/terms.of.use.en-us">terms of use<sup class="neu">new</sup></a></li>
+          <li><a href="https://www.craigslist.org/about/privacy.policy">privacy policy</a></li>
+          <li><a href="https://www.craigslist.org/about/help/system-status">system status</a></li>
+        </ul>
+        <ul class="leftlinks" id="about_craigslist">
+          <li><a href="https://www.craigslist.org/about/">about craigslist</a></li>
+          <li><a href="https://www.craigslist.org/about/craigslist_is_hiring">craigslist is hiring in sf</a></li>
+          <li><a href="https://www.craigslist.org/about/open_source">craigslist open source</a></li>
+          <li><a href="http://blog.craigslist.org/">craigslist blog</a></li>
+          <li><a href="https://www.craigslist.org/about/best/all/">best-of-craigslist</a></li>
+          <li><a href="https://www.youtube.com/user/craigslist">craigslist TV</a></li>
+          <li><a href="http://www.craigslistjoe.com/">"craigslist joe"</a></li>
+          <li><a href="http://craigconnects.org/">craig connects</a></li>
+        </ul>
+        </div>
+        <div id="center">
+          <div class="community">  
+          <div id="ccc" class="col">
+          <h4 class="ban"><a href="/d/community/search/ccc" class="ccc" data-alltitle="all community" data-cat="ccc"><span class="txt">community<sup class="c"></sup></span></a></h4>
+          <div class="cats">
+          <ul id="ccc0" class="left">
+            <li><a href="/d/activity-partners/search/act" class="act" data-cat="act"><span class="txt">activities<sup class="c"></sup></span></a></li>
+            <li><a href="/d/artists/search/ats" class="ats" data-cat="ats"><span class="txt">artists<sup class="c"></sup></span></a></li>
+            <li><a href="/d/childcare/search/kid" class="kid" data-cat="kid"><span class="txt">childcare<sup class="c"></sup></span></a></li>
+            <li><a href="/d/classes/search/cls" class="cls" data-cat="cls"><span class="txt">classes<sup class="c"></sup></span></a></li>
+            <li><a href="/d/events/search/eve" class="eve" data-cat="eve"><span class="txt">events<sup class="c"></sup></span></a></li>
+            <li><a href="/d/general-community/search/com" class="com" data-cat="com"><span class="txt">general<sup class="c"></sup></span></a></li>
+            <li><a href="/d/groups/search/grp" class="grp" data-cat="grp"><span class="txt">groups<sup class="c"></sup></span></a></li>
+            <li><a href="/d/local-news-and-views/search/vnn" class="vnn" data-cat="vnn"><span class="txt">local&nbsp;news<sup class="c"></sup></span></a></li>
+          </ul>
+          <ul id="ccc1" class="mc">
+            <li><a href="/d/lost-found/search/laf" class="laf" data-cat="laf"><span class="txt">lost+found<sup class="c"></sup></span></a></li>
+            <li><a href="/d/missed-connections/search/mis" class="mis" data-cat="mis"><span class="txt">missed connections<sup class="c"></sup></span></a></li>
+            <li><a href="/d/musicians/search/muc" class="muc" data-cat="muc"><span class="txt">musicians<sup class="c"></sup></span></a></li>
+            <li><a href="/d/pets/search/pet" class="pet" data-cat="pet"><span class="txt">pets<sup class="c"></sup></span></a></li>
+            <li><a href="/d/politics/search/pol" class="pol" data-cat="pol"><span class="txt">politics<sup class="c"></sup></span></a></li>
+            <li><a href="/d/rants-raves/search/rnr" class="rnr" data-cat="rnr"><span class="txt">rants &amp; raves<sup class="c"></sup></span></a></li>
+            <li><a href="/d/rideshare/search/rid" class="rid" data-cat="rid"><span class="txt">rideshare<sup class="c"></sup></span></a></li>
+            <li><a href="/d/volunteers/search/vol" class="vol" data-cat="vol"><span class="txt">volunteers<sup class="c"></sup></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="bbb" class="col">
+        <h4 class="ban"><a href="/d/services/search/bbb" class="bbb" data-alltitle="all services" data-cat="bbb"><span class="txt">services<sup class="c"></sup></span></a></h4>
+        <div class="cats">
+          <ul id="bbb0" class="left">
+            <li><a href="/d/automotive-services/search/aos" class="aos" data-cat="aos"><span class="txt">automotive<sup class="c"></sup></span></a></li>
+            <li><a href="/d/beauty-services/search/bts" class="bts" data-cat="bts"><span class="txt">beauty<sup class="c"></sup></span></a></li>
+            <li><a href="/d/cell-phone-mobile-services/search/cms" class="cms" data-cat="cms"><span class="txt">cell/mobile<sup class="c"></sup></span></a></li>
+            <li><a href="/d/computer-services/search/cps" class="cps" data-cat="cps"><span class="txt">computer<sup class="c"></sup></span></a></li>
+            <li><a href="/d/creative-services/search/crs" class="crs" data-cat="crs"><span class="txt">creative<sup class="c"></sup></span></a></li>
+            <li><a href="/d/cycle-services/search/cys" class="cys" data-cat="cys"><span class="txt">cycle<sup class="c"></sup></span></a></li>
+            <li><a href="/d/event-services/search/evs" class="evs" data-cat="evs"><span class="txt">event<sup class="c"></sup></span></a></li>
+            <li><a href="/d/farm-garden-services/search/fgs" class="fgs" data-cat="fgs"><span class="txt">farm+garden<sup class="c"></sup></span></a></li>
+            <li><a href="/d/financial-services/search/fns" class="fns" data-cat="fns"><span class="txt">financial<sup class="c"></sup></span></a></li>
+            <li><a href="/d/household-services/search/hss" class="hss" data-cat="hss"><span class="txt">household<sup class="c"></sup></span></a></li>
+          </ul>
+          <ul id="bbb1" class="mc">
+            <li><a href="/d/labor-hauling-moving/search/lbs" class="lbs" data-cat="lbs"><span class="txt">labor/move<sup class="c"></sup></span></a></li>
+            <li><a href="/d/legal-services/search/lgs" class="lgs" data-cat="lgs"><span class="txt">legal<sup class="c"></sup></span></a></li>
+            <li><a href="/d/lessons-tutoring/search/lss" class="lss" data-cat="lss"><span class="txt">lessons<sup class="c"></sup></span></a></li>
+            <li><a href="/d/marine-services/search/mas" class="mas" data-cat="mas"><span class="txt">marine<sup class="c"></sup></span></a></li>
+            <li><a href="/d/pet-services/search/pas" class="pas" data-cat="pas"><span class="txt">pet<sup class="c"></sup></span></a></li>
+            <li><a href="/d/real-estate-services/search/rts" class="rts" data-cat="rts"><span class="txt">real estate<sup class="c"></sup></span></a></li>
+            <li><a href="/d/skilled-trade-services/search/sks" class="sks" data-cat="sks"><span class="txt">skilled trade<sup class="c"></sup></span></a></li>
+            <li><a href="/d/small-biz-ads/search/biz" class="biz" data-cat="biz"><span class="txt">sm biz ads<sup class="c"></sup></span></a></li>
+            <li><a href="/d/travel-vacation-services/search/trv" class="trv" data-cat="trv"><span class="txt">travel/vac<sup class="c"></sup></span></a></li>
+            <li><a href="/d/writing-editing-translation/search/wet" class="wet" data-cat="wet"><span class="txt">write/ed/tran<sup class="c"></sup></span></a></li>
+          </ul>
+        </div>
+      </div>     
+      <div id="forums" class="col">
+        <h4 class="ban"><a href="https://forums.craigslist.org/?areaID=15" class="forums" data-cat="forums"><span class="txt">discussion forums<sup class="c"></sup></span></a></h4>
+        <div class="cats">
+          <ul id="forums0" class="left">
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=5178"><span class="txt">android<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=3232"><span class="txt">apple<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=49"><span class="txt">arts<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=78"><span class="txt">atheist<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=5"><span class="txt">autos<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=88"><span class="txt">beauty<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=95"><span class="txt">bikes<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=47"><span class="txt">celebs<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=34"><span class="txt">comp<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=1564"><span class="txt">cosmos<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=122"><span class="txt">diet<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=76"><span class="txt">divorce<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=130"><span class="txt">dying<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=99"><span class="txt">eco<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=8"><span class="txt">feedbk<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=41"><span class="txt">film<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=64"><span class="txt">fixit<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=22"><span class="txt">food<sup class="c"></sup></span></a></li>
+          </ul>
+          <ul id="forums1" class="mc">
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=2007"><span class="txt">frugal<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=85"><span class="txt">gaming<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=54"><span class="txt">garden<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=575"><span class="txt">haiku<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=9"><span class="txt">help<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=81"><span class="txt">history<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=6"><span class="txt">housing<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=7"><span class="txt">jobs<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=1257"><span class="txt">jokes<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=73"><span class="txt">legal<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=1991"><span class="txt">linux<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=79"><span class="txt">manners<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=1926"><span class="txt">marriage<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=53"><span class="txt">money<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=24"><span class="txt">music<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=4"><span class="txt">open<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=16"><span class="txt">outdoor<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=39"><span class="txt">parent<sup class="c"></sup></span></a></li>
+          </ul>
+          <ul id="forums2" class="mc">
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=26"><span class="txt">pets<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=71"><span class="txt">philos<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=5500"><span class="txt">photo<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=20"><span class="txt">politics<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=29"><span class="txt">psych<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=12"><span class="txt">recover<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=59"><span class="txt">religion<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=28"><span class="txt">rofo<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=96"><span class="txt">science<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=93"><span class="txt">spirit<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=32"><span class="txt">sports<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=2012"><span class="txt">super<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=1040"><span class="txt">tax<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=42"><span class="txt">travel<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=98"><span class="txt">tv<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=2400"><span class="txt">vegan<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=7000"><span class="txt">words<sup class="c"></sup></span></a></li>
+            <li><a href="https://forums.craigslist.org/?areaID=15&amp;forumID=27"><span class="txt">writing<sup class="c"></sup></span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <div class="housing">    
+        <div id="hhh" class="col">
+          <h4 class="ban"><a href="/d/housing/search/hhh" class="hhh" data-alltitle="all housing" data-cat="hhh"><span class="txt">housing<sup class="c"></sup></span></a></h4>
+          <div class="cats">
+            <ul id="hhh0" >
+              <li><a href="/d/apts-housing-for-rent/search/apa" class="apa" data-cat="apa"><span class="txt">apts / housing<sup class="c"></sup></span></a></li>
+              <li><a href="/d/housing-swap/search/swp" class="swp" data-cat="swp"><span class="txt">housing swap<sup class="c"></sup></span></a></li>
+              <li><a href="/d/all-housing-wanted/search/hsw" class="hsw" data-cat="hsw"><span class="txt">housing wanted<sup class="c"></sup></span></a></li>
+              <li><a href="/d/office-commercial/search/off" class="off" data-cat="off"><span class="txt">office / commercial<sup class="c"></sup></span></a></li>
+              <li><a href="/d/parking-storage/search/prk" class="prk" data-cat="prk"><span class="txt">parking / storage<sup class="c"></sup></span></a></li>
+              <li><a href="/d/real-estate/search/rea" class="rea" data-cat="rea"><span class="txt">real estate for sale<sup class="c"></sup></span></a></li>
+              <li><a href="/d/rooms-shares/search/roo" class="roo" data-cat="roo"><span class="txt">rooms / shared<sup class="c"></sup></span></a></li>
+              <li><a href="/d/wanted%3A-room-share/search/sha" class="sha" data-cat="sha"><span class="txt">rooms wanted<sup class="c"></sup></span></a></li>
+              <li><a href="/d/sublets-temporary/search/sub" class="sub" data-cat="sub"><span class="txt">sublets / temporary<sup class="c"></sup></span></a></li>
+              <li><a href="/d/vacation-rentals/search/vac" class="vac" data-cat="vac"><span class="txt">vacation rentals<sup class="c"></sup></span></a></li>
+            </ul>
+          </div>
+        </div>       
+        <div id="sss" class="col">
+          <h4 class="ban"><a href="/d/for-sale/search/sss" class="sss" data-alltitle="all for sale" data-cat="sss"><span class="txt">for sale<sup class="c"></sup></span></a></h4>
+          <div class="cats">
+            <ul id="sss0" class="left">
+              <li><a href="/d/antiques/search/ata" class="ata" data-cat="ata"><span class="txt">antiques<sup class="c"></sup></span></a></li>
+              <li><a href="/d/appliances/search/ppa" class="ppa" data-cat="ppa"><span class="txt">appliances<sup class="c"></sup></span></a></li>
+              <li><a href="/d/arts-crafts/search/ara" class="ara" data-cat="ara"><span class="txt">arts+crafts<sup class="c"></sup></span></a></li>
+              <li><a href="/d/atvs%2C-utvs%2C-snowmobiles/search/sna" class="sna" data-cat="sna"><span class="txt">atv/utv/sno<sup class="c"></sup></span></a></li>
+              <li><a href="/d/auto-parts/search/pta" class="pta" data-cat="pta"><span class="txt">auto parts<sup class="c"></sup></span></a></li>
+              <li><a href="/d/aviation/search/ava" class="ava" data-cat="ava"><span class="txt">aviation<sup class="c"></sup></span></a></li>
+              <li><a href="/d/baby-kid-stuff/search/baa" class="baa" data-cat="baa"><span class="txt">baby+kid<sup class="c"></sup></span></a></li>
+              <li><a href="/d/barter/search/bar" class="bar" data-cat="bar"><span class="txt">barter<sup class="c"></sup></span></a></li>
+              <li><a href="/d/health-and-beauty/search/haa" class="haa" data-cat="haa"><span class="txt">beauty+hlth<sup class="c"></sup></span></a></li>
+              <li><a href="/d/bicycle-parts/search/bip" class="bip" data-cat="bip"><span class="txt">bike parts<sup class="c"></sup></span></a></li>
+              <li><a href="/d/bicycles/search/bia" class="bia" data-cat="bia"><span class="txt">bikes<sup class="c"></sup></span></a></li>
+              <li><a href="/d/boat-parts-accessories/search/bpa" class="bpa" data-cat="bpa"><span class="txt">boat parts<sup class="c"></sup></span></a></li>
+              <li><a href="/d/boats/search/boo" class="boo" data-cat="boo"><span class="txt">boats<sup class="c"></sup></span></a></li>
+              <li><a href="/d/books-magazines/search/bka" class="bka" data-cat="bka"><span class="txt">books<sup class="c"></sup></span></a></li>
+              <li><a href="/d/business/search/bfa" class="bfa" data-cat="bfa"><span class="txt">business<sup class="c"></sup></span></a></li>
+              <li><a href="/d/cars-trucks/search/cta" class="cta" data-cat="cta"><span class="txt">cars+trucks<sup class="c"></sup></span></a></li>
+              <li><a href="/d/cds-dvds-vhs/search/ema" class="ema" data-cat="ema"><span class="txt">cds/dvd/vhs<sup class="c"></sup></span></a></li>
+              <li><a href="/d/cell-phones/search/moa" class="moa" data-cat="moa"><span class="txt">cell phones<sup class="c"></sup></span></a></li>
+              <li><a href="/d/clothing-accessories/search/cla" class="cla" data-cat="cla"><span class="txt">clothes+acc<sup class="c"></sup></span></a></li>
+              <li><a href="/d/collectibles/search/cba" class="cba" data-cat="cba"><span class="txt">collectibles<sup class="c"></sup></span></a></li>
+              <li><a href="/d/computer-parts/search/syp" class="syp" data-cat="syp"><span class="txt">computer parts<sup class="c"></sup></span></a></li>
+              <li><a href="/d/computers/search/sya" class="sya" data-cat="sya"><span class="txt">computers<sup class="c"></sup></span></a></li>
+              <li><a href="/d/electronics/search/ela" class="ela" data-cat="ela"><span class="txt">electronics<sup class="c"></sup></span></a></li>
+            </ul>
+            <ul id="sss1" class="mc">
+              <li><a href="/d/farm-garden/search/gra" class="gra" data-cat="gra"><span class="txt">farm+garden<sup class="c"></sup></span></a></li>
+              <li><a href="/d/free-stuff/search/zip" class="zip" data-cat="zip"><span class="txt">free<sup class="c"></sup></span></a></li>
+              <li><a href="/d/furniture/search/fua" class="fua" data-cat="fua"><span class="txt">furniture<sup class="c"></sup></span></a></li>
+              <li><a href="/d/garage-moving-sales/search/gms" class="gms" data-cat="gms"><span class="txt">garage sale<sup class="c"></sup></span></a></li>
+              <li><a href="/d/general-for-sale/search/foa" class="foa" data-cat="foa"><span class="txt">general<sup class="c"></sup></span></a></li>
+              <li><a href="/d/heavy-equipment/search/hva" class="hva" data-cat="hva"><span class="txt">heavy equip<sup class="c"></sup></span></a></li>
+              <li><a href="/d/household-items/search/hsa" class="hsa" data-cat="hsa"><span class="txt">household<sup class="c"></sup></span></a></li>
+              <li><a href="/d/jewelry/search/jwa" class="jwa" data-cat="jwa"><span class="txt">jewelry<sup class="c"></sup></span></a></li>
+              <li><a href="/d/materials/search/maa" class="maa" data-cat="maa"><span class="txt">materials<sup class="c"></sup></span></a></li>
+              <li><a href="/d/motorcycle-parts-accessories/search/mpa" class="mpa" data-cat="mpa"><span class="txt">motorcycle parts<sup class="c"></sup></span></a></li>
+              <li><a href="/d/motorcycles-scooters/search/mca" class="mca" data-cat="mca"><span class="txt">motorcycles<sup class="c"></sup></span></a></li>
+              <li><a href="/d/musical-instruments/search/msa" class="msa" data-cat="msa"><span class="txt">music instr<sup class="c"></sup></span></a></li>
+              <li><a href="/d/photo-video/search/pha" class="pha" data-cat="pha"><span class="txt">photo+video<sup class="c"></sup></span></a></li>
+              <li><a href="/d/recreational-vehicles/search/rva" class="rva" data-cat="rva"><span class="txt">rvs+camp<sup class="c"></sup></span></a></li>
+              <li><a href="/d/sporting-goods/search/sga" class="sga" data-cat="sga"><span class="txt">sporting<sup class="c"></sup></span></a></li>
+              <li><a href="/d/tickets/search/tia" class="tia" data-cat="tia"><span class="txt">tickets<sup class="c"></sup></span></a></li>
+              <li><a href="/d/tools/search/tla" class="tla" data-cat="tla"><span class="txt">tools<sup class="c"></sup></span></a></li>
+              <li><a href="/d/toys-games/search/taa" class="taa" data-cat="taa"><span class="txt">toys+games<sup class="c"></sup></span></a></li>
+              <li><a href="/d/trailers/search/tra" class="tra" data-cat="tra"><span class="txt">trailers<sup class="c"></sup></span></a></li>
+              <li><a href="/d/video-gaming/search/vga" class="vga" data-cat="vga"><span class="txt">video gaming<sup class="c"></sup></span></a></li>
+              <li><a href="/d/wanted/search/waa" class="waa" data-cat="waa"><span class="txt">wanted<sup class="c"></sup></span></a></li>
+              <li><a href="/d/auto-wheels-tires/search/wta" class="wta" data-cat="wta"><span class="txt">wheels+tires<sup class="c"></sup></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        <div class="jobs">       
+          <div id="jjj" class="col">
+            <h4 class="ban"><a href="/d/jobs/search/jjj" class="jjj" data-alltitle="all jobs" data-cat="jjj"><span class="txt">jobs<sup class="c"></sup></span></a></h4>
+            <div class="cats">
+              <ul id="jjj0" >
+                <li><a href="/d/accounting-finance/search/acc" class="acc" data-cat="acc"><span class="txt">accounting+finance<sup class="c"></sup></span></a></li>
+                <li><a href="/d/admin-office/search/ofc" class="ofc" data-cat="ofc"><span class="txt">admin / office<sup class="c"></sup></span></a></li>
+                <li><a href="/d/architect-engineer-cad/search/egr" class="egr" data-cat="egr"><span class="txt">arch / engineering<sup class="c"></sup></span></a></li>
+                <li><a href="/d/art-media-design/search/med" class="med" data-cat="med"><span class="txt">art / media / design<sup class="c"></sup></span></a></li>
+                <li><a href="/d/science-biotech/search/sci" class="sci" data-cat="sci"><span class="txt">biotech / science<sup class="c"></sup></span></a></li>
+                <li><a href="/d/business-mgmt/search/bus" class="bus" data-cat="bus"><span class="txt">business / mgmt<sup class="c"></sup></span></a></li>
+                <li><a href="/d/customer-service/search/csr" class="csr" data-cat="csr"><span class="txt">customer service<sup class="c"></sup></span></a></li>
+                <li><a href="/d/education-teaching/search/edu" class="edu" data-cat="edu"><span class="txt">education<sup class="c"></sup></span></a></li>
+                <li><a href="/d/et-cetera/search/etc" class="etc" data-cat="etc"><span class="txt">etc / misc<sup class="c"></sup></span></a></li>
+                <li><a href="/d/food-beverage-hospitality/search/fbh" class="fbh" data-cat="fbh"><span class="txt">food / bev / hosp<sup class="c"></sup></span></a></li>
+                <li><a href="/d/general-labor/search/lab" class="lab" data-cat="lab"><span class="txt">general labor<sup class="c"></sup></span></a></li>
+                <li><a href="/d/government/search/gov" class="gov" data-cat="gov"><span class="txt">government<sup class="c"></sup></span></a></li>
+                <li><a href="/d/human-resource/search/hum" class="hum" data-cat="hum"><span class="txt">human resources<sup class="c"></sup></span></a></li>
+                <li><a href="/d/legal-paralegal/search/lgl" class="lgl" data-cat="lgl"><span class="txt">legal  /  paralegal<sup class="c"></sup></span></a></li>
+                <li><a href="/d/manufacturing/search/mnu" class="mnu" data-cat="mnu"><span class="txt">manufacturing<sup class="c"></sup></span></a></li>
+                <li><a href="/d/marketing-advertising-pr/search/mar" class="mar" data-cat="mar"><span class="txt">marketing / pr / ad<sup class="c"></sup></span></a></li>
+                <li><a href="/d/healthcare/search/hea" class="hea" data-cat="hea"><span class="txt">medical / health<sup class="c"></sup></span></a></li>
+                <li><a href="/d/nonprofit/search/npo" class="npo" data-cat="npo"><span class="txt">nonprofit sector<sup class="c"></sup></span></a></li>
+                <li><a href="/d/real-estate/search/rej" class="rej" data-cat="rej"><span class="txt">real estate<sup class="c"></sup></span></a></li>
+                <li><a href="/d/retail-wholesale/search/ret" class="ret" data-cat="ret"><span class="txt">retail / wholesale<sup class="c"></sup></span></a></li>
+                <li><a href="/d/sales/search/sls" class="sls" data-cat="sls"><span class="txt">sales / biz dev<sup class="c"></sup></span></a></li>
+                <li><a href="/d/salon-spa-fitness/search/spa" class="spa" data-cat="spa"><span class="txt">salon / spa / fitness<sup class="c"></sup></span></a></li>
+                <li><a href="/d/security/search/sec" class="sec" data-cat="sec"><span class="txt">security<sup class="c"></sup></span></a></li>
+                <li><a href="/d/skilled-trades-artisan/search/trd" class="trd" data-cat="trd"><span class="txt">skilled trade / craft<sup class="c"></sup></span></a></li>
+                <li><a href="/d/software-qa-dba-etc/search/sof" class="sof" data-cat="sof"><span class="txt">software / qa / dba<sup class="c"></sup></span></a></li>
+                <li><a href="/d/systems-networking/search/sad" class="sad" data-cat="sad"><span class="txt">systems / network<sup class="c"></sup></span></a></li>
+                <li><a href="/d/technical-support/search/tch" class="tch" data-cat="tch"><span class="txt">technical support<sup class="c"></sup></span></a></li>
+                <li><a href="/d/transportation/search/trp" class="trp" data-cat="trp"><span class="txt">transport<sup class="c"></sup></span></a></li>
+                <li><a href="/d/tv-film-video-radio/search/tfr" class="tfr" data-cat="tfr"><span class="txt">tv / film / video<sup class="c"></sup></span></a></li>
+                <li><a href="/d/web-html-info-design/search/web" class="web" data-cat="web"><span class="txt">web / info design<sup class="c"></sup></span></a></li>
+                <li><a href="/d/writing-editing/search/wri" class="wri" data-cat="wri"><span class="txt">writing / editing<sup class="c"></sup></span></a></li>
+              </ul>
+            </div>
+          </div>       
+          <div id="ggg" class="col">
+            <h4 class="ban"><a href="/d/gigs/search/ggg" class="ggg" data-alltitle="all gigs" data-cat="ggg"><span class="txt">gigs<sup class="c"></sup></span></a></h4>
+            <div class="cats">
+              <ul id="ggg0" class="left">
+                <li><a href="/d/computer-gigs/search/cpg" class="cpg" data-cat="cpg"><span class="txt">computer<sup class="c"></sup></span></a></li>
+                <li><a href="/d/creative-gigs/search/crg" class="crg" data-cat="crg"><span class="txt">creative<sup class="c"></sup></span></a></li>
+                <li><a href="/d/crew-gigs/search/cwg" class="cwg" data-cat="cwg"><span class="txt">crew<sup class="c"></sup></span></a></li>
+                <li><a href="/d/domestic-gigs/search/dmg" class="dmg" data-cat="dmg"><span class="txt">domestic<sup class="c"></sup></span></a></li>
+              </ul>
+              <ul id="ggg1" class="mc">
+                <li><a href="/d/event-gigs/search/evg" class="evg" data-cat="evg"><span class="txt">event<sup class="c"></sup></span></a></li>
+                <li><a href="/d/labor-gigs/search/lbg" class="lbg" data-cat="lbg"><span class="txt">labor<sup class="c"></sup></span></a></li>
+                <li><a href="/d/talent-gigs/search/tlg" class="tlg" data-cat="tlg"><span class="txt">talent<sup class="c"></sup></span></a></li>
+                <li><a href="/d/writing-gigs/search/wrg" class="wrg" data-cat="wrg"><span class="txt">writing<sup class="c"></sup></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="rrr" class="col">
+            <h4 class="ban"><a href="/d/resumes/search/rrr" class="rrr" data-alltitle="all resumes" data-cat="rrr"><span class="txt">resumes<sup class="c"></sup></span></a></h4>
+            <div class="cats">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="rightbar">
+        <div id="langlinks">
+          <select name="lang" id="chlang" class="js-only">
+              <option value="?lang=da&amp;setlang=1">dansk</option><option value="?lang=de&amp;setlang=1">deutsch</option><option selected value="?lang=en&amp;cc=us&amp;setlang=1">english</option><option value="?lang=es&amp;cc=mx&amp;setlang=1">español</option><option value="?lang=fr&amp;setlang=1">français</option><option value="?lang=it&amp;setlang=1">italiano</option><option value="?lang=pt&amp;setlang=1">português</option><option value="?lang=fi&amp;setlang=1">suomi</option><option value="?lang=sv&amp;setlang=1">svenska</option><option value="?lang=vi&amp;setlang=1">tiếng việt</option><option value="?lang=tr&amp;setlang=1">türkçe</option><option value="?lang=ru&amp;setlang=1">русский</option><option value="?lang=zh&amp;setlang=1">中文</option><option value="?lang=ja&amp;setlang=1">日本語</option><option value="?lang=ko&amp;setlang=1">한국말</option>
+          </select>
+          <div id="nojschlang" class="no-js ">
+              <a href="?lang=da&amp;setlang=1">dansk</a><br><a href="?lang=de&amp;setlang=1">deutsch</a><br><b>english</b><br><a href="?lang=es&amp;cc=mx&amp;setlang=1">español</a><br><a href="?lang=fr&amp;setlang=1">français</a><br><a href="?lang=it&amp;setlang=1">italiano</a><br><a href="?lang=pt&amp;setlang=1">português</a><br><a href="?lang=fi&amp;setlang=1">suomi</a><br><a href="?lang=sv&amp;setlang=1">svenska</a><br><a href="?lang=vi&amp;setlang=1">tiếng việt</a><br><a href="?lang=tr&amp;setlang=1">türkçe</a><br><a href="?lang=ru&amp;setlang=1">русский</a><br><a href="?lang=zh&amp;setlang=1">中文</a><br><a href="?lang=ja&amp;setlang=1">日本語</a><br><a href="?lang=ko&amp;setlang=1">한국말</a><br>
+          </div>
+        </div>
+        <ul class="menu collapsible"><li class=" expand s"><h5 class="ban">nearby cl</h5><ul class="acitem">
+          <li class="s"><a href="//abilene.craigslist.org/">abilene</a>
+          <li class="s"><a href="//beaumont.craigslist.org/">beaumont</a>
+          <li class="s"><a href="//brownsville.craigslist.org/">brownsville</a>
+          <li class="s"><a href="//cenla.craigslist.org/">central la</a>
+          <li class="s"><a href="//collegestation.craigslist.org/">college station</a>
+          <li class="s"><a href="//corpuschristi.craigslist.org/">corpus christi</a>
+          <li class="s"><a href="//dallas.craigslist.org/">dallas</a>
+          <li class="s"><a href="//nacogdoches.craigslist.org/">deep east tx</a>
+          <li class="s"><a href="//delrio.craigslist.org/">del rio</a>
+          <li class="s"><a href="//easttexas.craigslist.org/">east tx</a>
+          <li class="s"><a href="//galveston.craigslist.org/">galveston</a>
+          <li class="s"><a href="//houston.craigslist.org/">houston</a>
+          <li class="s"><a href="//killeen.craigslist.org/">killeen-temple</a>
+          <li class="s"><a href="//lafayette.craigslist.org/">lafayette</a>
+          <li class="s"><a href="//lakecharles.craigslist.org/">lake charles</a>
+          <li class="s"><a href="//laredo.craigslist.org/">laredo</a>
+          <li class="s"><a href="//lawton.craigslist.org/">lawton</a>
+          <li class="s"><a href="//lubbock.craigslist.org/">lubbock</a>
+          <li class="s"><a href="//mcallen.craigslist.org/">mcallen</a>
+          <li class="s"><a href="//odessa.craigslist.org/">odessa</a>
+          <li class="s"><a href="//sanangelo.craigslist.org/">san angelo</a>
+          <li class="s"><a href="//sanantonio.craigslist.org/">san antonio</a>
+          <li class="s"><a href="//sanmarcos.craigslist.org/">san marcos</a>
+          <li class="s"><a href="//shreveport.craigslist.org/">shreveport</a>
+          <li class="s"><a href="//bigbend.craigslist.org/">southwest tx</a>
+          <li class="s"><a href="//texarkana.craigslist.org/">texarkana</a>
+          <li class="s"><a href="//texoma.craigslist.org/">texoma</a>
+          <li class="s"><a href="//victoriatx.craigslist.org/">victoria</a>
+          <li class="s"><a href="//waco.craigslist.org/">waco</a>
+          <li class="s"><a href="//wichitafalls.craigslist.org/">wichita falls</a>
+        </ul>
+          </li><li class=" s"><h5 class="ban">us cities</h5><ul class="acitem">
+          <li><a href="http://atlanta.craigslist.org/">atlanta</a>
+          <li><a href="http://austin.craigslist.org/">austin</a>
+          <li><a href="http://boston.craigslist.org/">boston</a>
+          <li><a href="http://chicago.craigslist.org/">chicago</a>
+          <li><a href="http://dallas.craigslist.org/">dallas</a>
+          <li><a href="http://denver.craigslist.org/">denver</a>
+          <li><a href="http://detroit.craigslist.org/">detroit</a>
+          <li><a href="http://houston.craigslist.org/">houston</a>
+          <li><a href="http://lasvegas.craigslist.org/">las&nbsp;vegas</a>
+          <li><a href="http://losangeles.craigslist.org/">los&nbsp;angeles</a>
+          <li><a href="http://miami.craigslist.org/">miami</a>
+          <li><a href="http://minneapolis.craigslist.org/">minneapolis</a>
+          <li><a href="http://newyork.craigslist.org/">new&nbsp;york</a>
+          <li><a href="http://orangecounty.craigslist.org/">orange&nbsp;co</a>
+          <li><a href="http://philadelphia.craigslist.org/">philadelphia</a>
+          <li><a href="http://phoenix.craigslist.org/">phoenix</a>
+          <li><a href="http://portland.craigslist.org/">portland</a>
+          <li><a href="http://raleigh.craigslist.org/">raleigh</a>
+          <li><a href="http://sacramento.craigslist.org/">sacramento</a>
+          <li><a href="http://sandiego.craigslist.org/">san&nbsp;diego</a>
+          <li><a href="http://seattle.craigslist.org/">seattle</a>
+          <li><a href="http://sfbay.craigslist.org/">sf&nbsp;bayarea</a>
+          <li><a href="http://washingtondc.craigslist.org/">wash dc</a>
+          <li class="s more"><a href="//geo.craigslist.org/iso/us">more ...</a></li>
+        </ul>
+          </li><li class=""><h5 class="ban">us states</h5><ul class="acitem">
+          <li><a href="//geo.craigslist.org/iso/us/al">alabama</a>
+          <li><a href="//geo.craigslist.org/iso/us/ak">alaska</a>
+          <li><a href="//geo.craigslist.org/iso/us/az">arizona</a>
+          <li><a href="//geo.craigslist.org/iso/us/ar">arkansas</a>
+          <li><a href="//geo.craigslist.org/iso/us/ca">california</a>
+          <li><a href="//geo.craigslist.org/iso/us/co">colorado</a>
+          <li><a href="//geo.craigslist.org/iso/us/ct">connecticut</a>
+          <li><a href="//geo.craigslist.org/iso/us/dc">dc</a>
+          <li><a href="//geo.craigslist.org/iso/us/de">delaware</a>
+          <li><a href="//geo.craigslist.org/iso/us/fl">florida</a>
+          <li><a href="//geo.craigslist.org/iso/us/ga">georgia</a>
+          <li><a href="//geo.craigslist.org/iso/gu">guam</a>
+          <li><a href="//geo.craigslist.org/iso/us/hi">hawaii</a>
+          <li><a href="//geo.craigslist.org/iso/us/id">idaho</a>
+          <li><a href="//geo.craigslist.org/iso/us/il">illinois</a>
+          <li><a href="//geo.craigslist.org/iso/us/in">indiana</a>
+          <li><a href="//geo.craigslist.org/iso/us/ia">iowa</a>
+          <li><a href="//geo.craigslist.org/iso/us/ks">kansas</a>
+          <li><a href="//geo.craigslist.org/iso/us/ky">kentucky</a>
+          <li><a href="//geo.craigslist.org/iso/us/la">louisiana</a>
+          <li><a href="//geo.craigslist.org/iso/us/me">maine</a>
+          <li><a href="//geo.craigslist.org/iso/us/md">maryland</a>
+          <li><a href="//geo.craigslist.org/iso/us/ma">mass</a>
+          <li><a href="//geo.craigslist.org/iso/us/mi">michigan</a>
+          <li><a href="//geo.craigslist.org/iso/us/mn">minnesota</a>
+          <li><a href="//geo.craigslist.org/iso/us/ms">mississippi</a>
+          <li><a href="//geo.craigslist.org/iso/us/mo">missouri</a>
+          <li><a href="//geo.craigslist.org/iso/us/mt">montana</a>
+          <li><a href="//geo.craigslist.org/iso/us/nc">n carolina</a>
+          <li><a href="//geo.craigslist.org/iso/us/ne">nebraska</a>
+          <li><a href="//geo.craigslist.org/iso/us/nv">nevada</a>
+          <li><a href="//geo.craigslist.org/iso/us/nj">new jersey</a>
+          <li><a href="//geo.craigslist.org/iso/us/nm">new mexico</a>
+          <li><a href="//geo.craigslist.org/iso/us/ny">new york</a>
+          <li><a href="//geo.craigslist.org/iso/us/nh">n hampshire</a>
+          <li><a href="//geo.craigslist.org/iso/us/nd">north dakota</a>
+          <li><a href="//geo.craigslist.org/iso/us/oh">ohio</a>
+          <li><a href="//geo.craigslist.org/iso/us/ok">oklahoma</a>
+          <li><a href="//geo.craigslist.org/iso/us/or">oregon</a>
+          <li><a href="//geo.craigslist.org/iso/us/pa">pennsylvania</a>
+          <li><a href="//geo.craigslist.org/iso/pr">puerto rico</a>
+          <li><a href="//geo.craigslist.org/iso/us/ri">rhode island</a>
+          <li><a href="//geo.craigslist.org/iso/us/sc">s carolina</a>
+          <li><a href="//geo.craigslist.org/iso/us/sd">south dakota</a>
+          <li><a href="//geo.craigslist.org/iso/us/tn">tennessee</a>
+          <li><a href="//geo.craigslist.org/iso/us/tx">texas</a>
+          <li><a href="//geo.craigslist.org/iso/us/ut">utah</a>
+          <li><a href="//geo.craigslist.org/iso/us/vt">vermont</a>
+          <li><a href="//geo.craigslist.org/iso/us/va">virginia</a>
+          <li><a href="//geo.craigslist.org/iso/us/wa">washington</a>
+          <li><a href="//geo.craigslist.org/iso/us/wv">west virginia</a>
+          <li><a href="//geo.craigslist.org/iso/us/wi">wisconsin</a>
+          <li><a href="//geo.craigslist.org/iso/us/wy">wyoming</a>
+          <li class="s more"><a href="//geo.craigslist.org/iso/us">more ...</a></li>
+        </ul>
+          </li><li class=" s"><h5 class="ban">canada</h5><ul class="acitem">
+          <li><a href="//calgary.craigslist.org/">calgary</a>
+          <li><a href="//edmonton.craigslist.org/">edmonton</a>
+          <li><a href="//halifax.craigslist.org/">halifax</a>
+          <li><a href="//montreal.craigslist.org/">montreal</a>
+          <li><a href="//ottawa.craigslist.org/">ottawa</a>
+          <li><a href="//saskatoon.craigslist.org/">saskatoon</a>
+          <li><a href="//toronto.craigslist.org/">toronto</a>
+          <li><a href="//vancouver.craigslist.org/">vancouver</a>
+          <li><a href="//victoria.craigslist.org/">victoria</a>
+          <li><a href="//winnipeg.craigslist.org/">winnipeg</a>
+          <li class="s more"><a href="//geo.craigslist.org/iso/ca">more ...</a></li>
+        </ul>
+          </li><li><h5 class="ban">cl worldwide</h5><ul class="acitem collapsible">
+          <li class="cont s">
+            <h5>africa</h5>
+            <ul class="acitem">
+              <li><a href="//geo.craigslist.org/iso/eg">egypt</a>
+              <li><a href="//geo.craigslist.org/iso/et">ethiopia</a>
+              <li><a href="//geo.craigslist.org/iso/gh">ghana</a>
+              <li><a href="//geo.craigslist.org/iso/ke">kenya</a>
+              <li><a href="//geo.craigslist.org/iso/ma">morocco</a>
+              <li><a href="//geo.craigslist.org/iso/za">south africa</a>
+              <li><a href="//geo.craigslist.org/iso/tn">tunisia</a>
+            </ul></li>
+          <li class="cont s">
+            <h5>americas</h5>
+            <ul class="acitem">
+              <li><a href="//geo.craigslist.org/iso/ar">argentina</a>
+              <li><a href="//geo.craigslist.org/iso/bo">bolivia</a>
+              <li><a href="http://rio.craigslist.org/">brazil</a>
+              <li><a href="https://www.craigslist.org/about/sites#CA">canada</a>
+              <li><a href="//geo.craigslist.org/iso/cl">chile</a>
+              <li><a href="//geo.craigslist.org/iso/co">colombia</a>
+              <li><a href="//geo.craigslist.org/iso/cr">costa rica</a>
+              <li><a href="//geo.craigslist.org/iso/do">dom republic</a>
+              <li><a href="//geo.craigslist.org/iso/ec">ecuador</a>
+              <li><a href="//geo.craigslist.org/iso/sv">el salvador</a>
+              <li><a href="//geo.craigslist.org/iso/gt">guatemala</a>
+              <li><a href="http://mexicocity.craigslist.org/">mexico</a>
+              <li><a href="//geo.craigslist.org/iso/ni">nicaragua</a>
+              <li><a href="//geo.craigslist.org/iso/pa">panama</a>
+              <li><a href="//geo.craigslist.org/iso/pe">peru</a>
+              <li><a href="//geo.craigslist.org/iso/pr">puerto rico</a>
+              <li><a href="https://www.craigslist.org/about/sites#US">united states</a>
+              <li><a href="//geo.craigslist.org/iso/uy">uruguay</a>
+              <li><a href="//geo.craigslist.org/iso/vi">us virgin islands</a>
+              <li><a href="//geo.craigslist.org/iso/ve">venezuela</a>
+            </ul></li>
+          <li class="cont s">
+            <h5>asia</h5>
+            <ul class="acitem">
+              <li><a href="//geo.craigslist.org/iso/bd">bangladesh</a>
+              <li><a href="http://shanghai.craigslist.org/">china</a>
+              <li><a href="//geo.craigslist.org/iso/hk">hong kong</a>
+              <li><a href="http://bangalore.craigslist.org/">india</a>
+              <li><a href="//geo.craigslist.org/iso/id">indonesia</a>
+              <li><a href="//geo.craigslist.org/iso/ir">iran</a>
+              <li><a href="//geo.craigslist.org/iso/iq">iraq</a>
+              <li><a href="http://telaviv.craigslist.org/">israel</a>
+              <li><a href="http://tokyo.craigslist.org/">japan</a>
+              <li><a href="//geo.craigslist.org/iso/kw">kuwait</a>
+              <li><a href="//geo.craigslist.org/iso/lb">lebanon</a>
+              <li><a href="//geo.craigslist.org/iso/my">malaysia</a>
+              <li><a href="//geo.craigslist.org/iso/pk">pakistan</a>
+              <li><a href="http://manila.craigslist.org/">philippines</a>
+              <li><a href="http://moscow.craigslist.org/">russia</a>
+              <li><a href="http://singapore.craigslist.org/">singapore</a>
+              <li><a href="//geo.craigslist.org/iso/kr">south korea</a>
+              <li><a href="//geo.craigslist.org/iso/tw">taiwan</a>
+              <li><a href="//geo.craigslist.org/iso/th">thailand</a>
+              <li><a href="//geo.craigslist.org/iso/tr">turkey</a>
+              <li><a href="//geo.craigslist.org/iso/ae">uae</a>
+              <li><a href="//geo.craigslist.org/iso/vn">vietnam</a>
+              <li><a href="//geo.craigslist.org/iso/ps">west bank</a>
+            </ul></li>
+          <li class="cont s">
+            <h5>europe</h5>
+            <ul class="acitem">
+              <li><a href="//geo.craigslist.org/iso/at">austria</a>
+              <li><a href="//geo.craigslist.org/iso/be">belgium</a>
+              <li><a href="//geo.craigslist.org/iso/bg">bulgaria</a>
+              <li><a href="//geo.craigslist.org/iso/hr">croatia</a>
+              <li><a href="//geo.craigslist.org/iso/cz">czech republic</a>
+              <li><a href="//geo.craigslist.org/iso/dk">denmark</a>
+              <li><a href="//geo.craigslist.org/iso/fi">finland</a>
+              <li><a href="http://paris.craigslist.org/">france</a>
+              <li><a href="http://berlin.craigslist.org/">germany</a>
+              <li><a href="//geo.craigslist.org/iso/gr">greece</a>
+              <li><a href="//geo.craigslist.org/iso/hu">hungary</a>
+              <li><a href="//geo.craigslist.org/iso/is">iceland</a>
+              <li><a href="//geo.craigslist.org/iso/ie">ireland</a>
+              <li><a href="http://rome.craigslist.org/">italy</a>
+              <li><a href="//geo.craigslist.org/iso/lu">luxembourg</a>
+              <li><a href="//geo.craigslist.org/iso/nl">netherlands</a>
+              <li><a href="//geo.craigslist.org/iso/no">norway</a>
+              <li><a href="//geo.craigslist.org/iso/pl">poland</a>
+              <li><a href="//geo.craigslist.org/iso/pt">portugal</a>
+              <li><a href="//geo.craigslist.org/iso/ro">romania</a>
+              <li><a href="http://moscow.craigslist.org/">russia</a>
+              <li><a href="http://madrid.craigslist.org/">spain</a>
+              <li><a href="//geo.craigslist.org/iso/se">sweden</a>
+              <li><a href="http://zurich.craigslist.org/">switzerland</a>
+              <li><a href="//geo.craigslist.org/iso/tr">turkey</a>
+              <li><a href="//geo.craigslist.org/iso/ua">ukraine</a>
+              <li><a href="//geo.craigslist.org/iso/gb">united kingdom</a>
+            </ul></li>
+          <li class="cont s">
+            <h5>middle east</h5>
+            <ul class="acitem">
+              <li><a href="//geo.craigslist.org/iso/eg">egypt</a>
+              <li><a href="//geo.craigslist.org/iso/iq">iraq</a>
+              <li><a href="http://telaviv.craigslist.org/">israel</a>
+              <li><a href="//geo.craigslist.org/iso/kw">kuwait</a>
+              <li><a href="//geo.craigslist.org/iso/lb">lebanon</a>
+              <li><a href="//geo.craigslist.org/iso/tr">turkey</a>
+              <li><a href="//geo.craigslist.org/iso/ae">uae</a>
+              <li><a href="//geo.craigslist.org/iso/ps">west bank</a>
+            </ul></li>
+          <li class="cont s">
+            <h5>oceania</h5>
+            <ul class="acitem">
+              <li><a href="http://sydney.craigslist.org/">australia</a>
+              <li><a href="//geo.craigslist.org/iso/gu">guam</a>
+              <li><a href="http://auckland.craigslist.org/">new zealand</a>
+              <li><a href="http://manila.craigslist.org/">philippines</a>
+            </ul></li>
+          </ul>
+          </li>
+        </ul>
+        <br>
+        <p class="more">
+          <a href="https://www.craigslist.org/about/sites"><em>more...</em></a>
+        </p>
+      </div>
+      </section>
+      <footer>
+        <ul class="clfooter">
+          <li>&copy;  <span class="desktop">craigslist</span><span class="mobile">CL</span></li>
+          <li><a href="https://www.craigslist.org/about/help/">help</a></li>
+          <li><a href="https://www.craigslist.org/about/scams">safety</a></li>
+          <li class="desktop"><a href="https://www.craigslist.org/about/privacy.policy">privacy</a></li>
+          <li class="desktop"><a href="https://forums.craigslist.org/?forumID=8">feedback</a></li>
+          <li class="desktop"><a href="https://www.craigslist.org/about/craigslist_is_hiring">cl jobs</a></li>
+          <li><a href="//www.craigslist.org/about/terms.of.use.en-us">terms</a><sup class="neu">new</sup></li>
+          <li><a href="https://www.craigslist.org/about/">about</a></li>
+          <li class="fsel desktop linklike" data-mode="mobile">mobile</li>
+          <li class="fsel mobile linklike" data-mode="regular">desktop</li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
