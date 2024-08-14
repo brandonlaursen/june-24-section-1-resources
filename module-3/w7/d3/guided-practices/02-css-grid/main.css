@@ -1,65 +1,74 @@
-html, body, div {
-    /* PAGE SETTINGS - DO NOT EDIT */
-    font-family: sans-serif;
-    background-color: antiquewhite;
-    padding: 20px;
+html,
+body,
+div {
+  /* PAGE SETTINGS - DO NOT EDIT */
+  font-family: sans-serif;
+  background-color: antiquewhite;
+  padding: 20px;
 }
 
 /* ====== */
 
 .grid-container {
-    text-align: center;
+  text-align: center;
 
-    /* Phase 1 */
+  /* Phase 1 */
 
-    display: grid;
-    grid-template-columns: 3fr auto 1fr;
-    grid-template-areas:
+  display: grid;
+  grid-template-columns: 3fr auto 1fr;
+  grid-template-areas:
     "header header header"
     "main . sidebar"
-    "footer footer footer"
+    "footer footer footer";
 }
 
 .item-1 {
-    background-color: #87a7b3; /* steel blue */
+  background-color: #87a7b3; /* steel blue */
 
-    /* Phase 1 */
-    grid-area: header;
-
+  /* Phase 1 */
+  grid-area: header;
 }
 .item-2 {
-    background-color: #e1f1dd; /* light sea green */
+  background-color: #e1f1dd; /* light sea green */
 
-    /* Phase 1 */
-    grid-area: main;
+  /* Phase 1 */
+  grid-area: main;
 }
 .item-3 {
-    background-color: #cdc7be; /* grey */
+  background-color: #cdc7be; /* grey */
 
-    /* Phase 1 */
-    grid-area: sidebar;
+  /* Phase 1 */
+  grid-area: sidebar;
 }
 .item-4 {
-    background-color: #766161; /* brown */
-    color: antiquewhite;
+  background-color: #766161; /* brown */
+  color: antiquewhite;
 
-    /* Phase 1 */
-    grid-area: footer;
-
+  /* Phase 1 */
+  grid-area: footer;
 }
 
 .divider {
-    background-image: linear-gradient(to right, #e1f1dd, #cdc7be);
+  background-image: linear-gradient(to right, #e1f1dd, #cdc7be);
 
-    /* Bonus Phase */
+  /* Bonus Phase */
 }
 
 /* ====== */
 
 .grid-container-flow {
-    border: solid #87a7b3 2px;
-    margin: 20px;
+  border: solid #87a7b3 2px;
+  margin: 20px;
 
-    /* Phase 2 */
-    /* Your code here
+  /* Phase 2 */
+  display: grid;
+  width: fit-content;
+  /* display: inline-grid; */
+
+  grid-template-columns: repeat(6, 100px);
+  grid-template-rows: repeat(3, 50px);
+
+  grid-auto-flow: column;
+  align-items: center;
+  justify-items: center;
 }
