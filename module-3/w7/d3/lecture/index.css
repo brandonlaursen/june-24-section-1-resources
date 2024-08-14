@@ -15,6 +15,39 @@ body {
   background-color: #f0f0f0;
 }
 
+
+/* Box styles */
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  border-radius: 10px;
+
+}
+
+/* Specific sizes and colors for each box */
+.box1 {
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50; /* Green */
+
+}
+
+.box2 {
+  width: 140px;
+  height: 140px;
+  background-color: #2196F3; /* Blue */
+}
+
+.box3 {
+  width: 160px;
+  height: 160px;
+  background-color: #FF5722; /* Orange */
+}
+
+
 /*
 
   display: flex
@@ -34,12 +67,13 @@ body {
     * space-between
     * space-around
     * space-evenly
-  align-items: align along cross axix
+  align-items: align along cross axis
   * flex start by default
     * flex-start
     * center
     * flex end
     * stretch
+
 */
 
 
@@ -48,38 +82,10 @@ body {
   height: 500px;
   width: 500px;
   background-color: #7b7b7b;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: flex-start; */
   /* align-items: flex-start; */
 
-}
 
-/* Box styles */
-.box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 24px;
-  border-radius: 10px;
-}
-
-/* Specific sizes and colors for each box */
-.box1 {
-  width: 100px;
-  height: 100px;
-  background-color: #4CAF50; /* Green */
-}
-
-.box2 {
-  width: 140px;
-  height: 140px;
-  background-color: #2196F3; /* Blue */
-}
-
-.box3 {
-  width: 160px;
-  height: 160px;
-  background-color: #FF5722; /* Orange */
 }
