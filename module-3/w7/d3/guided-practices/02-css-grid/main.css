@@ -20,6 +20,8 @@ div {
     "header header header"
     "main . sidebar"
     "footer footer footer";
+
+    row-gap: 15px;
 }
 
 .item-1 {
@@ -51,7 +53,7 @@ div {
 .divider {
   background-image: linear-gradient(to right, #e1f1dd, #cdc7be);
 
-  /* Bonus Phase */
+
 }
 
 /* ====== */

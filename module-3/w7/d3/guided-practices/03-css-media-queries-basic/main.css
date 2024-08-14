@@ -85,7 +85,7 @@ header {
 /* ----- Phase 1 - Moderate Screen ----- */
 
 
-@media screen and (min-width: 850px) and (max-width:1219px) {
+@media screen and (min-width: 851px) and (max-width:1219px) {
     .content {
         flex-direction: row;
     }
