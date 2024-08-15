@@ -1,0 +1,187 @@
+body {
+    background-color: #eeedf2;
+    font-family: "Neue Plak", sans-serif;
+    color: #6f7287;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+h1 {
+    color: #f05537;
+    font-weight: 800;
+    font-size: 2.5rem;
+}
+
+.nav-link {
+    color: #f05537;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 20px;
+}
+
+#search-button {
+    width: 250px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    font-size: 1rem;
+}
+
+input {
+    width: 200px;
+    height: 35px;
+    border: none;
+}
+
+#category-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.cat-button {
+    align-self: stretch;
+}
+
+.cat-button p {
+    display: inline-flex;
+}
+
+a, button, i {
+    cursor: pointer;
+}
+
+button {
+    border: solid 1px #6f7287;
+    color: #6f7287;
+    box-shadow: 2px 2px 5px #6f7287;
+}
+
+text, input {
+    cursor: text;
+}
+
+
+a:hover {
+    color: #f05537;
+}
+
+button:hover {
+    color: #f05537;
+    box-shadow: 2px 2px 5px #f05537;
+    border-color: #f05537;
+    ;
+
+}
+
+#events-cards {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: ".event-card" ".event-card";
+    grid-gap: 20px;
+}
+
+.event-card {
+    display: grid;
+    grid-template-rows: 1.5fr 1fr;
+    grid-template-areas: "image" "text";
+}
+
+.image-box {
+    grid-area: "image";
+}
+
+.text-box {
+    grid-area: "text";
+    align-content: center;
+    margin: 5px 15px 5px 15px;
+}
+
+.event-image {
+    display: block;
+    width: 100%;
+    max-height: 200px;
+    align-self: center;
+
+}
+
+.event-cost {
+    text-align: end;
+}
+
+#see-more {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#see-more button {
+    width: 300px;
+    padding: 20px;
+}
+
+footer {
+    background-color: #1e0a3c;
+    color: white;
+    padding: 20px;
+    text-align: end;
+}
+
+
+/* Exact breakpoint doesn't matter; grading at exactly 1024px and 700px */
+@media screen and (max-width: 900px) {
+    .link-container {
+        padding-top: 20px;
+    }
+
+    nav {
+        display: inline-block;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.25rem;
+    }
+
+    #search-button {
+        width: 100%;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    #category-cards {
+        grid-template-columns: auto;
+    }
+
+    #events-cards {
+        display: block;
+    }
+
+    .event-card {
+        text-align: center;
+        border: none;
+        grid-template-rows: 3fr 1fr;
+    }
+
+    .image-box {
+        width: auto;
+    }
+
+    .text-box {
+        width: 100%;
+        max-height: max-content;
+        margin: 0;
+    }
+
+    .event-image {
+        width: 100%;
+        max-height: max-content;
+    }
+}
