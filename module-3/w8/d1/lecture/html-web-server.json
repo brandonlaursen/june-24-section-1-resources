@@ -1,0 +1,39 @@
+
+{
+  "1": {
+    "endpoint": "Get all the dogs",
+    "request": {
+      "method": "GET",
+      "URL": "/dogs",
+      "headers": false,
+      "body": false
+    },
+    "response": {
+      "headers": {
+        "Content-Type": "text/html"
+      },
+      "statusCode": 200,
+      "body": true
+    }
+  },
+  "2": {
+    "endpoint": "Form submission for adding a dog",
+    "request": {
+      "method": "POST",
+      "URL": "/dogs",
+      "headers": {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      "body": {
+        "dog": true
+      }
+    },
+    "response": {
+      "headers": {
+        "Location": "/dogs"
+      },
+      "statusCode": 302,
+      "body": false
+    }
+  }
+}

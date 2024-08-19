@@ -1,0 +1,46 @@
+{
+  "1": {
+    "endpoint": "Get all the dogs",
+    "request": {
+      "method": "GET",
+      "URL": "/dogs",
+      "headers": false,
+      "body": false
+    },
+    "response": {
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "statusCode": 200,
+      "body": [
+        {
+          "dogId": true,
+          "dog": true
+        }
+      ]
+    }
+  },
+  "2": {
+    "endpoint": "Add a dogs",
+    "request": {
+      "method": "POST",
+      "URL": "/dogs",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "dog": true
+      }
+    },
+    "response": {
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "statusCode": 201,
+      "body": {
+        "dogId": true,
+        "dog": true
+      }
+    }
+  }
+}
