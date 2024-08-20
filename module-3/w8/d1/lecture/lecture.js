@@ -17,7 +17,6 @@
   * Will not be assessed on creating servers/routes!
   * We will learn all about that in mod 4
 
-
   HTTP Request - Traditional Web Server
 
   * Request could be either
@@ -93,7 +92,6 @@
       * Server sends a redirection response
       * Browser receives response
       * Browser redirects user to the path specified in the Location header of the response
-
 
 
   Response
