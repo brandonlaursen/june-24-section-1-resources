@@ -8,8 +8,8 @@ function function1() {
   // * returning promise object
   return new Promise((resolve, rejected) => {
     setTimeout(() => {
-      // let number = "asdf";
-      let number = 10;
+      let number = "asdf";
+      // let number = 10;
       console.log("in setTimeout");
       // * If the promise is resolved the number is variable is passed as an argument to the resolve or rejected function
       if (!isNaN(number)) {
@@ -18,14 +18,16 @@ function function1() {
       } else {
         // * rejected takes the reason for the rejection
         rejected(`${number} is not a number`);
+
+        throw Error(`${number} is not a number`);
       }
     }, 1000);
-  });
+  })
   // .then(
   //   (value) => console.log("resolved", 10 + value),
-  //   (reason) => console.log("1.rejected", reason)
+  //   // (reason) => console.log("1.rejected", reason)
   // )
-  // .catch((reason) => console.log("2.rejected", reason));
+  .catch((reason) => console.log("2.rejected", reason));
 }
 
 // function1();
@@ -48,25 +50,33 @@ function function2(id = 1) {
 }
 
 // function2();
+//
 
 async function chainPromises() {
-  function1()
-  .then((id) => function2(id))
-  .then((id) => function2(id))
-  .then((id) => function2(id))
+  // function1()
+  // .then((id) => function2(id))
+  // .then((id) => function2(id))
+  // .then((id) => function2(id))
+  // .catch((e) => console.log(e))
 
+  try {
+    let id = await function1();
+    await function2(id);
+    await function2(45);
+    await function2(30);
+  } catch (e) {
+    console.log(e);
+  }
 
-  // let id = await function1();
-  await function2(id);
-  await function2(45);
-  await function2(30);
   // await function4();
 
+  // const res = Promise.all([function1(), function2()]).then(() => {
+  //   console.log('done with promise chain')
+  // });
 
+  // console.log(res);
 }
 
 chainPromises();
 
-function function4(){
-
-}
+function function4() {}
