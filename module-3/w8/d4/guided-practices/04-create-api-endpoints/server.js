@@ -91,7 +91,7 @@ const server = http.createServer((req, res) => {
     if (req.method === "POST" && req.url === "/dogs") {
       const { name, age } = req.body;
 
-      const newId = getNewDogId();
+      const newId = getNewDogId();// 2
 
       const newDog = {
         name,
@@ -99,7 +99,11 @@ const server = http.createServer((req, res) => {
         dogId: newId
       }
 
+      dogs.push(newDog);
 
+
+      res.statusCode = 200;
+      res.setHeader("Content-Type", 'application/json');
       return res.end(JSON.stringify(newDog));
     }
 
