@@ -42,6 +42,11 @@ const server = http.createServer((req, res) => {
     };
 
     // Return the `resBody` object as JSON in the body of the response
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "application/json");
+
+    return res.end(JSON.stringify(resBody));
   });
 });
 
