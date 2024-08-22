@@ -101,7 +101,7 @@ const server = http.createServer((req, res) => {
 
       dogs.push(newDog);
 
-      res.statusCode = 200;
+      res.statusCode = 201;
       res.setHeader("Content-Type", "application/json");
       return res.end(JSON.stringify(newDog));
     }
@@ -133,10 +133,10 @@ const server = http.createServer((req, res) => {
 
     // DELETE /dogs/:dogId
     if (req.method === "DELETE" && req.url.startsWith("/dogs/")) {
-      const urlParts = req.url.split("/");
+      const urlParts = req.url.split("/");// [/, dogs, 1]
       if (urlParts.length === 3) {
-        const dogId = urlParts[2];
-
+        const dogId = urlParts[2];// 1
+                                        //  1
         const dogIndex = dogs.findIndex((dog) => dogId == dog.dogId);
         // console.log(dogIndex);
 
