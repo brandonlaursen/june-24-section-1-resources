@@ -90,8 +90,17 @@ const server = http.createServer((req, res) => {
     // POST /dogs
     if (req.method === "POST" && req.url === "/dogs") {
       const { name, age } = req.body;
-      // Your code here
-      return res.end();
+
+      const newId = getNewDogId();
+
+      const newDog = {
+        name,
+        age,
+        dogId: newId
+      }
+
+
+      return res.end(JSON.stringify(newDog));
     }
 
     // PUT or PATCH /dogs/:dogId
