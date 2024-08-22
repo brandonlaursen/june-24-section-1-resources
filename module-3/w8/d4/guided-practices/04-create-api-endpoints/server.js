@@ -117,7 +117,7 @@ const server = http.createServer((req, res) => {
 
         const { name, age } = req.body;
 
-        const foundDog = dogs.find(dog => dogId == dog.dogId);
+        const foundDog = dogs.find((dog) => dogId == dog.dogId);
 
         console.log(foundDog);
         foundDog.name = name;
@@ -127,7 +127,6 @@ const server = http.createServer((req, res) => {
         res.statusCode = 200;
         res.setHeader("Content-Type", "application/json");
         return res.end(JSON.stringify(foundDog));
-
       }
       return res.end();
     }
@@ -137,7 +136,15 @@ const server = http.createServer((req, res) => {
       const urlParts = req.url.split("/");
       if (urlParts.length === 3) {
         const dogId = urlParts[2];
-        // Your code here
+
+        const dogIndex = dogs.findIndex((dog) => dogId == dog.dogId);
+        // console.log(dogIndex);
+
+        dogs.splice(dogIndex, 1);
+
+        res.statusCode = 200;
+        res.setHeader("Content-Type", "application/json");
+        return res.end(JSON.stringify({ message: "Successfully adopted :)😳💩" }));
       }
       return res.end();
     }
