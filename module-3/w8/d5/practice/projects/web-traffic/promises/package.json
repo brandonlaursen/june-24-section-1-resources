@@ -1,0 +1,11 @@
+{
+  "name": "promises-practice-assessment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-with-json": "mocha --reporter json"
+  },
+  "author": "App Academy",
+  "private": true
+}

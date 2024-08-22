@@ -1,0 +1,22 @@
+{
+  "name": "html-css-2a-web-traffic",
+  "version": "1.0.0",
+  "scripts": {
+    "test1": "(npm test --prefix promises -- --reporter json --reporter-option output=output.json &> /dev/null || true) && npm run print1",
+    "test2": "(npm test --prefix html-web-server -- --reporter json --reporter-option output=output.json &> /dev/null || true) && npm run print2",
+    "test3": "(npm test --prefix json-api-server -- --reporter json --reporter-option output=output.json &> /dev/null || true) && npm run print3",
+    "test-for-failures": "echo 'Running all tests... (This may take a minute...)' && (npm run test1 || true) && (npm run test2 || true) && (npm run test3 || true)",
+    "print1": "echo \"\\033[31mPromises failures:\\033[0m\" && cat promises/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .err.message})]'",
+    "print2": "echo \"\n\\033[31mHTML-web-server failures:\\033[0m\" && cat html-web-server/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .err.message})]'",
+    "print3": "echo \"\n\\033[31mJSON-api-server failures:\\033[0m\" && cat json-api-server/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .err.message})]'",
+    "test": "(npm test --prefix promises || true) && (npm test --prefix html-web-server || true) && (npm test --prefix json-api-server || true)"  },
+  "author": "App Academy",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "chai-spies": "^1.1.0",
+    "mocha": "^10.3.0",
+    "node-fetch": "^3.3.2",
+    "node-jq": "^4.3.1"
+  },
+  "private": true
+}

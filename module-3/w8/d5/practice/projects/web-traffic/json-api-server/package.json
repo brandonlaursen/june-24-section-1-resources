@@ -1,0 +1,13 @@
+{
+  "name": "json-api-server-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "test": "mocha",
+    "test-01": "mocha test/01.js",
+    "test-02": "mocha test/02.js"
+  },
+  "author": "App Academy"
+}

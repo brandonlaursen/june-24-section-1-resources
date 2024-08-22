@@ -1,0 +1,30 @@
+{
+  "1": {
+    "endpoint": "Get all the colors",
+    "request": {
+      "method": "",
+      "URL": "",
+      "headers": null,
+      "body": null
+    },
+    "response": {
+      "headers": null,
+      "statusCode": null,
+      "body": null
+    }
+  },
+  "2": {
+    "endpoint": "Add a color",
+    "request": {
+      "method": "",
+      "URL": "",
+      "headers": null,
+      "body": null
+    },
+    "response": {
+      "headers": null,
+      "statusCode": null,
+      "body": null
+    }
+  }
+}
