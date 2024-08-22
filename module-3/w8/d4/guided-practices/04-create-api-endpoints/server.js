@@ -56,10 +56,15 @@ const server = http.createServer((req, res) => {
       // Your code here
 
       // set the status code
-      // set the headers
+      res.statusCode = 200;
+      // set the headers;
+      res.setHeader("Content-Type", 'application/json');
       // set the body - send the body as json - JSON.stringify
+
+      let json = JSON.stringify(dogs);
+      // console.log(json);// [{"dogId":1,"name":"Fluffy","age":2}]
       // end the response
-      return res.end();
+      return res.end(json);
     }
 
     // GET /dogs/:dogId
