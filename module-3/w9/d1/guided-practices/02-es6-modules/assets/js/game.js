@@ -43,4 +43,14 @@ class Game {
   }
 }
 
+
+// export const sayHello = () => {
+//   console.log('hello from game.js')
+// };
+
+// export default() => {
+//   console.log('hello from game.js')
+// };
+
+
 export default Game;
