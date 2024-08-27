@@ -8,10 +8,11 @@ const select = () => {
 
     * document.querySelector(".className img:not("")")
 
-    * getElementClassName("className")
+    * getElementsByClassName("className")
     * getElementById("idName")
-    
 
+
+    getElementClassName("seed")
 
     */
 
@@ -19,6 +20,9 @@ const select = () => {
     /* Section 1 */
     // 1. Get all seeded fruit elements
     // Your code here
+    const seeded = document.getElementsByClassName("seed");
+
+    // console.log(seeded);
 
     // 2. Get all seedless fruit elements
     // Your code here
