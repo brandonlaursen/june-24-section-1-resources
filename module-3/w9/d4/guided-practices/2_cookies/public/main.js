@@ -1,35 +1,71 @@
+//! --------------------------------------------------------------------
+//?                         Helper Function
+//! --------------------------------------------------------------------
+
+const cookieGrabber = (cookey) =>
+    document.cookie
+        .split('; ')
+        .find((cookie) => cookie.startsWith(cookey))
+        ?.split('=')
+        .pop();
+
+// const cookieGrabber = (cookey) => {
+//     const findDaCookie = document.cookie
+//         .split('; ')
+//         .find((cookie) => cookie.startsWith(cookey));
+
+//     if (findDaCookie) {
+//         return findDaCookie.split('=').pop();
+//     }
+
+//     return null;
+// };
+
 /* ============================== PHASE 1 + 2 ============================== */
+
+const myArr = [1, 1];
 
 // For storing user's theme selection in cookies
 function storeTheme(themeName) {
-    // Your code here 
+    document.cookie = `theme=${themeName};max-age=1000`;
 }
 
 // For restoring theme from cookies, if selected by the user in the past
 function restoreTheme() {
-    // Your code here 
+    const themeName = cookieGrabber('theme');
+
+    console.log(themeName);
+
+    if (!themeName) {
+        console.log('No theme here!');
+    } else {
+        setTheme(themeName);
+    }
 }
 
 // For clearing theme selection from cookies (reset to default)
 function clearTheme() {
-    // Your code here 
+    // document.cookie = 'theme=whatever;max-age=0;';
+    document.cookie = `theme=whatever;expires=${new Date()}`;
 }
 
 /* ================================ PHASE 3 ================================ */
 
 // For storing user's display name in cookies
 function storeName(displayName) {
-    // Your code here 
+    document.cookie = `username=${displayName}`;
 }
 
 // For restoring user's display name from cookies, if set in the past
 function restoreName() {
-    // Your code here 
+    const username = cookieGrabber('username');
+
+    if (username) setInputValue('display-name', username);
 }
 
 // For clearing user's display name from cookies
 function clearName() {
-    // Your code here 
+    document.cookie = 'username=;max-age=0;';
 }
 
 /* ========================================================================= */
@@ -55,7 +91,7 @@ function toggleButtonSelection(themeName, selected) {
 
 function setTheme(themeName) {
     // Clear previous selection so buttons don't get stuck in selected state
-    resetTheme()
+    resetTheme();
 
     // Remember user's selection by storing it in their browser
     storeTheme(themeName);
@@ -83,7 +119,7 @@ function resetTheme() {
 
 function addThemeEventListeners() {
     const themeNames = ['dragon', 'griffin', 'wizard'];
-    themeNames.forEach(themeName => {
+    themeNames.forEach((themeName) => {
         const button = document.getElementById(`theme-button-${themeName}`);
         button.addEventListener('click', () => setTheme(themeName));
     });
@@ -134,7 +170,7 @@ function clearAll() {
 // For adding click event listener on the Clear All button
 
 function addClearAllEventListener() {
-    const button = document.getElementById("clear-all");
+    const button = document.getElementById('clear-all');
     button.addEventListener('click', clearAll);
 }
 

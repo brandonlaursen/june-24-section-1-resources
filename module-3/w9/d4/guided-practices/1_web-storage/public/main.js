@@ -2,35 +2,57 @@
 
 // For storing user's theme selection in the browser
 function storeTheme(themeName) {
-    // Your code here 
+    // { 'theme': 'nameOfThemeHere' }
+    localStorage.setItem('theme', themeName);
+    // localStorage.setItem('game', 'Elden Ring');
+    // localStorage.setItem('cat-1', 'Momo');
+    // localStorage.setItem('cat-2', 'Tenten');
+    // localStorage.setItem('cat-3', 'Kiki');
+    // localStorage.setItem('cat-3', 'Some other cat');
+    // localStorage.setItem('cat-3', 'Kiki is back to take back whats hers');
 }
 
 // For restoring theme, if selected by the user in the past
 function restoreTheme() {
-    // Your code here 
+    const myTheme = localStorage.getItem('theme');
+
+    // console.log("I'm in the restoreTheme function :)", myTheme);
+    // if (myTheme) {
+    //     setTheme(myTheme);
+    // }
+
+    if (myTheme) setTheme(myTheme);
 }
 
 // For clearing theme selection from the browser's storage (reset to default)
 
 function clearTheme() {
-    // Your code here 
+    localStorage.removeItem('theme');
+
+    // localStorage.setItem('theme', '');
 }
 
 /* ================================ PHASE 2 ================================ */
 
 // For storing user's display name
 function storeName(displayName) {
-    // Your code here 
+    sessionStorage.setItem('username', displayName);
 }
 
 // For restoring user's display name, if set in the past
 function restoreName() {
-    // Your code here 
+    const username = sessionStorage.getItem('username');
+
+    if (!username) {
+        console.log("Doesn't really matter actually");
+    }
+
+    setInputValue('display-name', username);
 }
 
 // For clearing user's display name from browser storage
 function clearName() {
-    // Your code here 
+    sessionStorage.removeItem('username');
 }
 
 /* ========================================================================= */
@@ -56,7 +78,7 @@ function toggleButtonSelection(themeName, selected) {
 
 function setTheme(themeName) {
     // Clear previous selection so buttons don't get stuck in selected state
-    resetTheme()
+    resetTheme();
 
     // Remember user's selection by storing it in their browser
     storeTheme(themeName);
@@ -84,7 +106,7 @@ function resetTheme() {
 
 function addThemeEventListeners() {
     const themeNames = ['dragon', 'griffin', 'wizard'];
-    themeNames.forEach(themeName => {
+    themeNames.forEach((themeName) => {
         const button = document.getElementById(`theme-button-${themeName}`);
         button.addEventListener('click', () => setTheme(themeName));
     });
@@ -135,7 +157,7 @@ function clearAll() {
 // For adding click event listener on the Clear All button
 
 function addClearAllEventListener() {
-    const button = document.getElementById("clear-all");
+    const button = document.getElementById('clear-all');
     button.addEventListener('click', clearAll);
 }
 
