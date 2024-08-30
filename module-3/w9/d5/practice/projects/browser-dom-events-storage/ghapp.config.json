@@ -1,0 +1,10 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "event-handling-storage/test-script.js"
+      ]
+    }
+  },
+  "is-gh-template": true
+}

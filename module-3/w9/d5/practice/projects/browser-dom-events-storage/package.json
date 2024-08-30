@@ -1,0 +1,19 @@
+{
+  "name": "html-css-3p-browser-dom-events-storage",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "(npm test --prefix event-handling-storage || true) && npm test --prefix selection-manipulation",
+    "test1": "(npm run test-for-failures --prefix event-handling-storage &> /dev/null || true) && npm run print1",
+    "test2": "(npm run test-for-failures --prefix selection-manipulation &> /dev/null || true) && npm run print2",
+    "test-for-failures": "echo 'Running all tests... (This may take a minute...)' && (npm run test1 || true) && npm run test2",
+    "print1": "echo \"\\033[31mEvent-handling-storage failures:\\033[0m\" && cat event-handling-storage/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .displayError})]'",
+    "print2": "echo \"\n\\033[31mSelection-manipulation failures:\\033[0m\" && cat selection-manipulation/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .displayError})]'"
+  },
+  "devDependencies": {
+    "cypress": "^13.6.6",
+    "node-jq": "^4.3.1"
+  },
+  "author": "App Academy"
+}
