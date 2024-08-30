@@ -2,18 +2,23 @@
 
 function getCookie(key) {
   const themes = document.cookie;
-  // console.log(name);
+//   console.log('2',themes);
   let cookies = themes.split("; ");
-  // console.log(cookies);
+
+//   console.log("3",cookies);
   let value;
+
   for (let i = 0; i < cookies.length; i++) {
     let cookie = cookies[i];
-
+    // console.log(4, cookie);
+    // theme=dragon'
     if (cookie.startsWith(`${key}`)) {
+    //   [theme, dragon]
       value = cookie.split("=")[1];
     }
   }
 
+//   console.log(5, value)
   return value;
 }
 
@@ -24,7 +29,9 @@ function storeTheme(themeName) {
 
 // For restoring theme from cookies, if selected by the user in the past
 function restoreTheme() {
+//  console.log('1')
   const theme = getCookie("theme");
+//  console.log('6', theme);
 
   setTheme(theme);
 }
