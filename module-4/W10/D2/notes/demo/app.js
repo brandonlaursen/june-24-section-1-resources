@@ -3,8 +3,19 @@ const express = require("express");
 const app = express();
 
 
+const demoRouter = require('./routes/demoRoutes');
+
+
+require('dotenv').config();
+
+console.log(process.env)
+console.log('==>',process.env.PORT);
+
+app.use('/demo', demoRouter);
+// app.use('/user', userRouter);
+
 // app.use(express.json());
-console.log('==========')
+// console.log('==========')
 
 app.use((req, res, next) => {
   console.log('first middle wear');
@@ -13,6 +24,15 @@ app.use((req, res, next) => {
   // res.send('first middle wear');
   next();
 });
+
+// app.get('/demo/notes', (req, res, next) => {
+
+//   console.log('second middle wear');
+
+//   // res.send('hello from /');
+//   next();
+// })
+
 
 
 app.get('/', (req, res, next) => {
@@ -113,4 +133,4 @@ app.use((err, req, res, next) => {
 
 
 
-app.listen(5000, () => console.log(`Listening on port ${5000}...`))
+app.listen(process.env.PORT, () => console.log(`Listening on port ${process.env.PORT}...`))
