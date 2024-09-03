@@ -31,7 +31,7 @@ function storeTheme(themeName) {
 function restoreTheme() {
 //  console.log('1')
   const theme = getCookie("theme");
-//  console.log('6', theme);
+//  console.log('6', theme);`
 
   setTheme(theme);
 }
