@@ -69,6 +69,14 @@ const myMiddleWear1 = (req, res, next) => {
 
 };
 
+// middle wear
+// app.use() -  any url
+// app.get - specific url
+// res.send() - end the response
+// next() - pass to the next middle wear
+  // app.use
+  // app.get
+// next(err) - skips straight to the middle wear - must be app.use
 
 // just a function definition
 const myMiddleWear2 = (err, req, res, next) => {
