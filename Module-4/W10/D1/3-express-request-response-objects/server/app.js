@@ -4,13 +4,21 @@ const app = express();
 
 app.use(express.json());
 
+
+
 /**
  *  Basic Phase 1 - Plain-text response
  *     Method: GET
  *     Route: /version
  *     Response (Text): "1.0.0"
  */
-// Your code here 
+
+
+app.get('/version', (req, res) => {
+
+    res.send('1.0.0');
+})
+
 
 /**
  *  Basic Phase 2 - Route param and JSON response
@@ -28,7 +36,27 @@ app.use(express.json());
  *  Hint: Use your name, birth date and favorite movies (as strings in the code)
  *  combined with the id sent as a route parameter in the url
  */
-// Your code here 
+
+app.get('/viewers/:id', (req, res) => {
+
+    // console.log(req.params);
+    // console.log(req.params.id);
+    const { id } = req.params;
+
+    const user = {
+        id,
+        firstName:'brandon',
+        lastName:'laursen',
+        birthDate: '10/15/1995',
+        favoriteMovies: ['deadpool']
+    }
+
+    res.status(200);
+
+    res.json(user);
+
+})
+
 
 /** Basic Phase 3 - Query params in URL
  *      Method: GET
@@ -47,7 +75,23 @@ app.use(express.json());
  *          message required
  *          message required
  */
-// Your code here 
+
+
+// req.query - grabs the value from the url itself
+
+app.get('/info', (req, res) => {
+
+    // console.log('do we make it')
+    // console.log(req.query.message);
+
+
+    if(!req.query.message) {
+        res.send("message required")
+    } else {
+        res.send(req.query.message)
+    }
+})
+
 
 /**
  *  IMPORTANT: Scroll to the top for basic phases.
@@ -81,7 +125,22 @@ app.use(express.json());
  *      Alternate response object:
  *          { "id": 98765432, "name": "Honey Sweet", "year": 1967, "isFavorite": false }
  */
-// Your code here 
+
+app.post('/movies', (req, res) => {
+    console.log(req.body);// { name: 'Bash', year: '2002', favorite: 'on' }
+
+    const { name, year, favorite } = req.body;
+
+    const resObj = {
+        id: 2,
+        name,
+        number: Number(year),
+        isFavorite: favorite === 'on'
+    };
+
+    // console.log(resObj);
+    res.json(resObj);
+})
 
 /**
  *  Advanced Bonus Phase B - Research how to return static
@@ -98,7 +157,7 @@ app.use(express.json());
  *
  *      Test route: /logo.png
  */
-// Your code here 
+// Your code here
 
 // DO NOT EDIT - Set port and listener
 if (require.main === module) {
