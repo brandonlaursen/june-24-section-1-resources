@@ -12,3 +12,7 @@ VALUES ('Amy', 'Pond'),
        ('Martha', 'Jones'),
        ('Donna', 'Noble'),
        ('River', 'Song');
+
+
+
+SELECT (first_name) FROM friends
