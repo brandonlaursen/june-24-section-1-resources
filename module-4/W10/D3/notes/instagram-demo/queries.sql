@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS users;
+CREATE TABLE users (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);
+INSERT INTO users (name) VALUES ("richard");
+SELECT * FROM users;
