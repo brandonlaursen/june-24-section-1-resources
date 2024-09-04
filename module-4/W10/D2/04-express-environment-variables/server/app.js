@@ -1,6 +1,10 @@
 const express = require('express');
 const app = express();
-// Your code here 
+
+// npm install dotenv
+require('dotenv').config();
+
+// console.log(process.env)
 
 app.get('/', (req, res) => {
     res.send(process.env.SECRET_MESSAGE);

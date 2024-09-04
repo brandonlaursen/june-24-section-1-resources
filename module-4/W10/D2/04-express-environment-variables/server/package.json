@@ -8,6 +8,7 @@
   },
   "author": "",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.17.1"
   },
   "license": "ISC"
