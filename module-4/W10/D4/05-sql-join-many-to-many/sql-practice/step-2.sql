@@ -4,19 +4,10 @@
 -- Your code here
 
 
-SELECT musicians.first_name
+SELECT musicians.first_name,  musicians.last_name
 FROM musicians
 JOIN musician_instruments
 ON musicians.id = musician_instruments.musician_id
-
 JOIN instruments
 ON musician_instruments.instrument_id = instruments.id
-
-
-
-SELECT musicians.first_name
-FROM musicians
-JOIN instruments
-ON instruments.id =  musician_instruments.instrument_id
-JOIN musician_instruments
-ON musicians.id = musician_instruments.musician_id
+WHERE instruments.type = 'piano';

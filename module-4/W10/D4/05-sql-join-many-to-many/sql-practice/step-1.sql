@@ -4,13 +4,13 @@
 -- on to the join table.
 -- Your code here
 
-.mode box
+-- .mode box
 
 
-SELECT musicians.first_name, musicians.last_name
+SELECT musicians.first_name, instruments.type
 FROM musicians
 JOIN musician_instruments
 ON musicians.id = musician_instruments.musician_id
 JOIN instruments
-ON musician_instruments.instrument_id = instruments.id
-WHERE instruments.type = 'piano';
+ON musician_instruments.instrument_id = instruments.id;
+-- WHERE instruments.type = 'piano';
