@@ -1,3 +1,6 @@
+
+.mode box
+
 DROP TABLE IF EXISTS albums;
 CREATE TABLE albums (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -20,4 +23,13 @@ VALUES ('The Falling Box', 1, 2015, 25000),
   ('The King River', 5, 2017, 85000),
   ('Under Water', 5, 2020, 106000),
   ('Another Fork', 5, 2021, 140000);
-  
+
+
+SELECT * FROM albums;
+
+SELECT * FROM albums WHERE num_sold >= 100000;
+
+SELECT * FROM albums WHERE year BETWEEN 2018 and 2020;
+
+SELECT * FROM albums WHERE band_id IN (1,3,4);
+
