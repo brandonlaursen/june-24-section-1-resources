@@ -1,0 +1,10 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "database-schema.txt"
+      ]
+    }
+  },
+  "is-gh-template": true
+}

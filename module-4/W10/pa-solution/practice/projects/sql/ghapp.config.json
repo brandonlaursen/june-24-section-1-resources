@@ -1,0 +1,9 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "database-schema.txt"
+      ]
+    }
+  }
+}

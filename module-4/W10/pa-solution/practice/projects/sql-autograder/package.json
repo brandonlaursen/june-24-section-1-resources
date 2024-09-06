@@ -1,0 +1,17 @@
+{
+  "name": "practice-assessment-sql-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "test-with-json": "mocha --reporter json"
+  },
+  "keywords": [],
+  "author": "App Academy",
+  "dependencies": {
+    "better-sqlite3": "^9.4.3",
+    "chai": "^4.3.6",
+    "mocha": "^10.3.0",
+    "sqlite3": "^5.1.7"
+  }
+}
