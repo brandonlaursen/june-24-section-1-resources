@@ -1,4 +1,5 @@
 PRAGMA foreign_keys=on; -- Turns on foreign key support in SQLite3
+.mode box
 
 -- Create / re-create tables
 DROP TABLE IF EXISTS toys;
