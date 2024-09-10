@@ -16,6 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   Cat.init({
     name: DataTypes.STRING,
     weight: DataTypes.FLOAT,
+    age: DataTypes.FLOAT
   }, {
     sequelize,
     modelName: 'Cat',
