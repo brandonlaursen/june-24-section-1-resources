@@ -597,6 +597,52 @@ We can get around this error by setting a defaultValue property
 
 ---
 
+Adding Column to existing table
+
+`npx sequelize-cli migration:generate --name add-mpg-to-cars`
+
+## Update edit add-mpg-to-cars migration
+```js
+"use strict";
+
+module.exports = {
+  up: async (queryInterface, Sequelize) => {
+    /**
+     * Add altering commands here.
+     *
+     * Example:
+     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
+     */
+   await queryInterface.addColumn("Cars", "mpg", {
+      type: Sequelize.FLOAT,
+    });
+  },
+
+  down: async (queryInterface, Sequelize) => {
+    /**
+     * Add reverting commands here.
+     *
+     * Example:
+     * await queryInterface.dropTable('users');
+     */
+    await queryInterface.removeColumn("Cars", "mpg");
+  },
+};
+```
+### Run migration
+
+`npx dotenv sequelize-cli db:migrate`
+
+### Use sqlite3 to check that the schema of the table
+
+`cd db`
+
+`sqlite3 dev.db`
+
+`.schema`
+
+
+
 # Practice Modify Column Migrations
 
 ---
