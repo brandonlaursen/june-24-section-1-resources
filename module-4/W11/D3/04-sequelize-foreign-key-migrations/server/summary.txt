@@ -1,0 +1,67 @@
+
+
+ONE TO MANY
+
+ONE - band
+MANY - musician
+
+Migration
+
+1. add a column to the many side - musician migration
+Musician Table
+id PRIMARY KEY
+bandId FOREIGN KEY REFERENCES Bands <-- ADDED
+
+Band Table
+id PRIMARY KEY
+
+
+Models
+
+2. update the many side of the model - musician
+
+   Musician.belongsTo(models.Band, {
+        foreignKey: "bandId",
+      });
+
+3. update the one side of the model - band
+
+   Band.hasMany(models.Musician, {
+        foreignKey: "bandId",
+        onDelete: "CASCADE"
+      });
+
+
+MANY TO MANY
+
+1. CREATE THE join the Table Migration
+add the references
+
+ musicianId: {
+        type: Sequelize.INTEGER,
+        references: { model: "Musicians"}
+      },
+      instrumentId: {
+        type: Sequelize.INTEGER,
+        references: {model: 'Instruments'}
+      },
+
+2. UPDATE THE Models
+- NO NEED TO TOUCH THE JOIN Table
+
+UPDATE THE MUSICIAN Table
+
+
+  Musician.belongsToMany(models.Instrument, {
+    through: models.MusicianInstrument,
+    foreignKey: "musicianId",
+    otherKey: "instrumentId",
+  });
+
+UPDATE INSTRUMENTS Table
+
+Instrument.belongsToMany(models.Musician, {
+      through: models.MusicianInstrument,
+      foreignKey: "instrumentId",
+      otherKey: "musicianId",
+    });
