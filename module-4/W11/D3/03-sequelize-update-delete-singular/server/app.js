@@ -53,6 +53,16 @@ app.put("/puppies/:puppyId", async (req, res, next) => {
 // STEP 2: Delete a puppy by id
 app.delete("/puppies/:puppyId", async (req, res, next) => {
   // Your code here
+
+  const deletePuppy = await Puppy.findByPk(req.params.puppyId);
+
+  await deletePuppy.destroy();
+
+  res.json({
+    message: `Puppy with id of ${req.params.puppyId} has been ADOPTED!`,
+    puppy: deletePuppy
+  })
+
 });
 
 // Root route - DO NOT MODIFY
