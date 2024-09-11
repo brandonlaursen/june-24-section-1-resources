@@ -24,7 +24,35 @@ app.get('/puppies', async (req, res, next) => {
 // Use these values to BUILD a new Puppy in the database.
 // Respond to the request by sending a success message
 app.post('/puppies/build', async (req, res, next) => {
-    // Your code here 
+    // Your code here
+
+    console.log(req.body);
+    // const newPuppy = await Puppy.build(req.body);
+
+    const {
+        name,
+        ageYrs,
+        weightLbs,
+        breed,
+        microchipped
+      } = req.body;
+
+    const newPuppy = await Puppy.build({
+        name,
+        ageYrs,
+        weightLbs,
+        breed,
+        microchipped
+      });
+
+      await newPuppy.validate();
+      await newPuppy.save();
+
+      console.log(newPuppy)
+      res.json({
+        message: 'The puppy has been saved!',
+        data: newPuppy
+      })
 })
 
 // STEP 2
@@ -33,7 +61,7 @@ app.post('/puppies/build', async (req, res, next) => {
 // Use these values to CREATE a new Puppy in the database.
 // Respond to the request by sending a success message
 app.post('/puppies/create', async (req, res, next) => {
-    // Your code here 
+    // Your code here
 })
 
 
