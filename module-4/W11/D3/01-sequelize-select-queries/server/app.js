@@ -21,7 +21,10 @@ app.use(express.json());
 app.get('/puppies', async (req, res, next) => {
     let allPuppies;
 
-    // Your code here 
+    allPuppies = await Puppy.findAll({
+    order:[["name", "ASC"]]
+    })
+
 
     res.json(allPuppies);
 });
@@ -33,7 +36,7 @@ app.get('/puppies', async (req, res, next) => {
 app.get('/puppies/chipped', async (req, res, next) => {
     let chippedPuppies;
 
-    // Your code here 
+    // Your code here
 
     res.json(chippedPuppies);
 });
@@ -44,8 +47,8 @@ app.get('/puppies/chipped', async (req, res, next) => {
 // Finding one record by attribute
 app.get('/puppies/name/:name', async (req, res, next) => {
     let puppyByName;
-    
-    // Your code here 
+
+    // Your code here
 
     res.json(puppyByName);
 })
@@ -56,8 +59,8 @@ app.get('/puppies/name/:name', async (req, res, next) => {
 // WHERE clause with a comparison
 app.get('/puppies/shepherds', async (req, res, next) => {
     let shepherds;
-    
-    // Your code here 
+
+    // Your code here
 
     res.json(shepherds);
 })
@@ -68,8 +71,8 @@ app.get('/puppies/shepherds', async (req, res, next) => {
 // WHERE clause with multiple attributes and comparisons
 app.get('/puppies/tinybabies', async (req, res, next) => {
     let tinyBabyPuppies;
-    
-    // Your code here 
+
+    // Your code here
 
     res.json(tinyBabyPuppies);
 })
@@ -80,9 +83,9 @@ app.get('/puppies/tinybabies', async (req, res, next) => {
 // Finding one record by primary key
 app.get('/puppies/:id', async (req, res, next) => {
     let puppyById;
-    
-    // Your code here 
-    
+
+    // Your code here
+
     res.json(puppyById);
 });
 
