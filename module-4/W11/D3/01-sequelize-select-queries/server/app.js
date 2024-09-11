@@ -90,8 +90,8 @@ app.get("/puppies/tinybabies", async (req, res, next) => {
 // Finding one record by primary key
 app.get("/puppies/:id", async (req, res, next) => {
   let puppyById;
-
-  // Your code here
+// console.log(req.params.id);
+  puppyById = await Puppy.findByPk(req.params.id);
 
   res.json(puppyById);
 });
