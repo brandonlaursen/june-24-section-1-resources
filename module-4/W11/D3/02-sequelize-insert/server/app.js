@@ -62,6 +62,13 @@ app.post('/puppies/build', async (req, res, next) => {
 // Respond to the request by sending a success message
 app.post('/puppies/create', async (req, res, next) => {
     // Your code here
+
+    const newPuppy = await Puppy.create(req.body);
+    
+    res.json({
+        message: 'The puppy has been saved!',
+        data: newPuppy
+      })
 })
 
 
