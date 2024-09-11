@@ -20,13 +20,16 @@ app.get('/puppies', async (req, res, next) => {
 
 // STEP 1: Update a puppy by id
 app.put('/puppies/:puppyId', async (req, res, next) => {
-    // Your code here 
+    // Your code here
+    console.log(req.body);
+    
+    // if(req.body.name)
 })
 
 
 // STEP 2: Delete a puppy by id
 app.delete('/puppies/:puppyId', async (req, res, next) => {
-    // Your code here 
+    // Your code here
 })
 
 

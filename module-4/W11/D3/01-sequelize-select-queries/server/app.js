@@ -94,6 +94,10 @@ app.get("/puppies/tinybabies", async (req, res, next) => {
         [Op.lt]: 20,
       },
     },
+    order: [
+        ["ageYrs", "asc"],
+        ["weightLbs", "ASC"],
+      ],
   });
 
   res.json(tinyBabyPuppies);
