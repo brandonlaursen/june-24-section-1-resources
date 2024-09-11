@@ -44,6 +44,7 @@ app.put("/puppies/:puppyId", async (req, res, next) => {
   res.status(200);
 
   res.json({
+    message: ' puppy was successfully updated',
     puppy: updatePuppy
   })
 
