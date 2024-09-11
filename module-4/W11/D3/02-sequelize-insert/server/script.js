@@ -39,6 +39,16 @@ const create = async () => {
     // breed: Bulldog
     // microchipped: true
     // Your code here
+
+
+    await Puppy.create({
+      name: "Beans",
+      ageYrs: 1.6,
+      weightLbs: 42,
+      breed: "Bulldog",
+      microchipped: true
+    });
+
   } catch (err) {
     throw err;
   }
