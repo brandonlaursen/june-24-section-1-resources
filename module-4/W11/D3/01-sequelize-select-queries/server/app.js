@@ -53,12 +53,12 @@ app.get("/puppies/chipped", async (req, res, next) => {
 app.get("/puppies/name/:name", async (req, res, next) => {
   let puppyByName;
 
-//   console.log(req.params.name);
+  //   console.log(req.params.name);
   puppyByName = await Puppy.findOne({
     where: {
-        name: req.params.name
-    }
-  })
+      name: req.params.name,
+    },
+  });
 
   res.json(puppyByName);
 });
@@ -69,7 +69,12 @@ app.get("/puppies/name/:name", async (req, res, next) => {
 app.get("/puppies/shepherds", async (req, res, next) => {
   let shepherds;
 
-  // Your code here
+  shepherds = await Puppy.findAll({
+    where: {
+    //   breed: { [Op.endsWith]: "Shepherd" },
+    breed: { [Op.like]: '%Shepherd' },
+    },
+  });
 
   res.json(shepherds);
 });
@@ -80,7 +85,7 @@ app.get("/puppies/shepherds", async (req, res, next) => {
 app.get("/puppies/tinybabies", async (req, res, next) => {
   let tinyBabyPuppies;
 
-  // Your code here
+  
 
   res.json(tinyBabyPuppies);
 });
@@ -90,7 +95,7 @@ app.get("/puppies/tinybabies", async (req, res, next) => {
 // Finding one record by primary key
 app.get("/puppies/:id", async (req, res, next) => {
   let puppyById;
-// console.log(req.params.id);
+  // console.log(req.params.id);
   puppyById = await Puppy.findByPk(req.params.id);
 
   res.json(puppyById);
