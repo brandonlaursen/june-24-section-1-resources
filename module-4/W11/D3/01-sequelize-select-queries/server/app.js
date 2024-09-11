@@ -35,13 +35,13 @@ app.get("/puppies/chipped", async (req, res, next) => {
   let chippedPuppies;
 
   chippedPuppies = await Puppy.findAll({
+    where: {
+      microchipped: true,
+    },
     order: [
       ["ageYrs", "desc"],
       ["name", "ASC"],
     ],
-    where: {
-      microchipped: true,
-    },
   });
 
   res.json(chippedPuppies);
@@ -53,7 +53,12 @@ app.get("/puppies/chipped", async (req, res, next) => {
 app.get("/puppies/name/:name", async (req, res, next) => {
   let puppyByName;
 
-  // Your code here
+//   console.log(req.params.name);
+  puppyByName = await Puppy.findOne({
+    where: {
+        name: req.params.name
+    }
+  })
 
   res.json(puppyByName);
 });
