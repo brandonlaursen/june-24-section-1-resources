@@ -40,7 +40,7 @@ app.post("/musicians/:musicianId/instruments", async (req, res, next) => {
 
   // add, create, set, get
   // addInstruments
-  // addMusicians
+  // addMusician
   await musician.addInstruments(instrumentIds);
 
   res.json({
