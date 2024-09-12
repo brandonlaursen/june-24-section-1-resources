@@ -1,0 +1,11 @@
+{
+  "name": "sequelize-practice-phase-1-migrations-and-models",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "DB_FILE=test/test.db mocha --timeout 30000"
+  }
+}

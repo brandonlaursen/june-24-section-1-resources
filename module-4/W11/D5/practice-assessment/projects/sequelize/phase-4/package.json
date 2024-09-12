@@ -1,0 +1,12 @@
+{
+  "name": "sequelize-practice-phase-4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "reset-files": "node ../test-utils/reset-files.js",
+    "test": "DB_FILE=test/test.db mocha --timeout 5000"
+  }
+}

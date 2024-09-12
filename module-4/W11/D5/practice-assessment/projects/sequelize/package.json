@@ -1,0 +1,37 @@
+{
+  "name": "express-sql-2-practice-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "App Academy",
+  "scripts": {
+    "test1": "(npm run test --prefix phase-1 -- --reporter json --reporter-option output=output.json &> /dev/null || true) && npm run print1",
+    "test2": "(npm run test --prefix phase-2 -- --reporter json --reporter-option output=output.json &> /dev/null || true) && npm run print2",
+    "test3": "(npm run test --prefix phase-3 -- --reporter json --reporter-option output=output.json &> /dev/null || true) && npm run print3",
+    "test4": "(npm run test --prefix phase-4 -- --reporter json --reporter ../test-utils/reporter.js &> /dev/null || true) && npm run print4",
+    "test-for-failures": "echo 'Running all tests... (This may take a minute...)' && npm run test1 && npm run test2 && npm run test3 && npm run test4",
+    "print1": "echo \"\\033[31mPhase 1 failures:\\033[0m\" && (cat phase-1/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .err.message})]')",
+    "print2": "echo \"\n\\033[31mPhase 2 failures:\\033[0m\" && (cat phase-2/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .err.message})]')",
+    "print3": "echo \"\n\\033[31mPhase 3 failures:\\033[0m\" && (cat phase-3/output.json | ./node_modules/node-jq/bin/jq '[(.failures[] | {fullTitle, error: .err.message})]')",
+    "print4": "echo \"\n\\033[31mPhase 4 failures:\\033[0m\" && (cat phase-4/output.json | ./node_modules/node-jq/bin/jq '.failures')",
+    "test": "npm test --prefix phase-1 | grep -v '^I' && npm test --prefix phase-2 | grep -v '^E' && npm test --prefix phase-3 | grep -v '^E' && npm test --prefix phase-4 | grep -v '^E'"
+  },
+  "dependencies": {
+    "better-sqlite3": "^8.2.0",
+    "chai": "^4.3.6",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.4.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "mocha": "^10.3.0",
+    "node-jq": "^4.3.0",
+    "sequelize": "^6.37.1",
+    "sequelize-cli": "^6.6.2",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "dotenv-cli": "^7.3.0",
+    "nodemon": "^3.1.0"
+  }
+}

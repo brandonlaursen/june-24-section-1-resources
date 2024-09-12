@@ -1,0 +1,30 @@
+{
+  "programs": {
+    "BASE": {
+      "starter-exclusions": [
+        "phase-1/.env",
+        "phase-1/db/dev.db",
+        "phase-1/example-db-schema.txt",
+        "phase-1/db/models/airplane.js",
+        "phase-1/db/migrations/20220412144128-create-airplane.js",
+        "phase-2/.env",
+        "phase-2/db/dev.db",
+        "phase-2/example-db-schema.txt",
+        "phase-3/.env",
+        "phase-3/db/dev.db",
+        "phase-3/example-db-schema.txt",
+        "phase-4/.env",
+        "phase-4/db/dev.db",
+        "phase-4/bonus-db-schema.txt",
+        "phase-4/db-schema-with-relationships.txt",
+        "phase-4/db-schema-without-relationships.txt",
+        "phase-4/db/models/match.js",
+        "phase-4/db/migrations/20220414193710-add-column-currentTeamId-to-players.js",
+        "phase-4/db/migrations/20220414193720-add-column-sportId-to-teams.js",
+        "phase-4/db/migrations/20220415174340-create-draft-pick.js",
+        "phase-4/db/migrations/20220415191034-create-match.js",
+        "phase-4/db/models/draftpick.js"
+      ]
+    }
+  }
+}
